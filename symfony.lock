@@ -137,11 +137,7 @@
             "ref": "a1c8800e40ae735206bb14586fdd6c4630a51b8d"
         },
         "files": [
-<<<<<<< HEAD
             "./config/packages/lock.yaml"
-=======
-            "config/packages/lock.yaml"
->>>>>>> 0917cd80ce2946f2d6a4ac3a6b8353a195aff539
         ]
     },
     "symfony/mailer": {
