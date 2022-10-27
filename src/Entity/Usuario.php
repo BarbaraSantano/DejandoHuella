@@ -46,6 +46,21 @@ class Usuario implements UserInterface, PasswordAuthenticatedUserInterface
     #[ORM\Column(length: 24)]
     private ?string $iban = null;
 
+
+    // public function __construct($id = null, $email = null, $password = null, $nombre = null, $apellido = null, $direccion = null, $fecha_nacimiento = null, $iban = null)
+    // {
+    //     $this->id =$id;
+    //     $this->email =$email;
+    //     $this->password =$password;
+    //     $this->nombre =$nombre;
+    //     $this->apellido =$apellido;
+    //     $this->direccion =$direccion;
+    //     $this->fecha_nacimiento =$fecha_nacimiento;
+    //     $this->iban =$iban;
+
+    // }
+
+
     public function getId(): ?int
     {
         return $this->id;
