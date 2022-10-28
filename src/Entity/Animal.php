@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\AnimalRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 #[ORM\Entity(repositoryClass: AnimalRepository::class)]
@@ -42,6 +44,22 @@ class Animal
 
     #[ORM\Column(length: 1500)]
     private ?string $descripcion = null;
+
+    #[ORM\OneToMany(mappedBy: 'animal', targetEntity: Acoge::class)]
+    private Collection $acoge;
+
+    #[ORM\OneToMany(mappedBy: 'animal', targetEntity: Adopta::class)]
+    private Collection $adopta;
+
+    #[ORM\ManyToMany(targetEntity: Padrino::class, inversedBy: 'animals')]
+    private Collection $padrino;
+
+    public function __construct()
+    {
+        $this->acoge = new ArrayCollection();
+        $this->adopta = new ArrayCollection();
+        $this->padrino = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -164,6 +182,96 @@ class Animal
     public function setDescripcion(string $descripcion): self
     {
         $this->descripcion = $descripcion;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, Acoge>
+     */
+    public function getAcoge(): Collection
+    {
+        return $this->acoge;
+    }
+
+    public function addAcoge(Acoge $acoge): self
+    {
+        if (!$this->acoge->contains($acoge)) {
+            $this->acoge->add($acoge);
+            $acoge->setAnimal($this);
+        }
+
+        return $this;
+    }
+
+    public function removeAcoge(Acoge $acoge): self
+    {
+        if ($this->acoge->removeElement($acoge)) {
+            // set the owning side to null (unless already changed)
+            if ($acoge->getAnimal() === $this) {
+                $acoge->setAnimal(null);
+            }
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, Adopta>
+     */
+    public function getAdopta(): Collection
+    {
+        return $this->adopta;
+    }
+
+    public function addAdoptum(Adopta $adoptum): self
+    {
+        if (!$this->adopta->contains($adoptum)) {
+            $this->adopta->add($adoptum);
+            $adoptum->setAnimal($this);
+        }
+
+        return $this;
+    }
+
+    public function removeAdoptum(Adopta $adoptum): self
+    {
+        if ($this->adopta->removeElement($adoptum)) {
+            // set the owning side to null (unless already changed)
+            if ($adoptum->getAnimal() === $this) {
+                $adoptum->setAnimal(null);
+            }
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, Padrino>
+     */
+    public function getPadrino(): Collection
+    {
+        return $this->padrino;
+    }
+
+    public function addPadrino(Padrino $padrino): self
+    {
+        if (!$this->padrino->contains($padrino)) {
+            $this->padrino->add($padrino);
+            $padrino->setAnimal($this);
+        }
+
+        return $this;
+    }
+
+    public function removePadrino(Padrino $padrino): self
+    {
+        if ($this->padrino->removeElement($padrino)) {
+            // set the owning side to null (unless already changed)
+            if ($padrino->getAnimal() === $this) {
+                $padrino->setAnimal(null);
+            }
+        }
 
         return $this;
     }

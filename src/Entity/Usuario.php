@@ -51,6 +51,18 @@ class Usuario implements UserInterface, PasswordAuthenticatedUserInterface
     #[ORM\Column(type: 'boolean')]
     private $isVerified = false;
 
+    #[ORM\OneToOne(inversedBy: 'usuario', cascade: ['persist', 'remove'])]
+    private ?Acoge $acoge = null;
+
+    #[ORM\OneToOne(inversedBy: 'usuario', cascade: ['persist', 'remove'])]
+    private ?Adopta $adopta = null;
+
+    #[ORM\OneToOne(inversedBy: 'usuario', cascade: ['persist', 'remove'])]
+    private ?Padrino $padrino = null;
+
+    #[ORM\OneToOne(inversedBy: 'usuario', cascade: ['persist', 'remove'])]
+    private ?Socio $socio = null;
+
 
     // public function __construct($id = null, $email = null, $password = null, $nombre = null, $apellido = null, $direccion = null, $fecha_nacimiento = null, $iban = null)
     // {
@@ -216,6 +228,54 @@ class Usuario implements UserInterface, PasswordAuthenticatedUserInterface
     public function setIsVerified(bool $isVerified): self
     {
         $this->isVerified = $isVerified;
+
+        return $this;
+    }
+
+    public function getAcoge(): ?Acoge
+    {
+        return $this->acoge;
+    }
+
+    public function setAcoge(?Acoge $acoge): self
+    {
+        $this->acoge = $acoge;
+
+        return $this;
+    }
+
+    public function getAdopta(): ?Adopta
+    {
+        return $this->adopta;
+    }
+
+    public function setAdopta(?Adopta $adopta): self
+    {
+        $this->adopta = $adopta;
+
+        return $this;
+    }
+
+    public function getPadrino(): ?Padrino
+    {
+        return $this->padrino;
+    }
+
+    public function setPadrino(?Padrino $padrino): self
+    {
+        $this->padrino = $padrino;
+
+        return $this;
+    }
+
+    public function getSocio(): ?Socio
+    {
+        return $this->socio;
+    }
+
+    public function setSocio(?Socio $socio): self
+    {
+        $this->socio = $socio;
 
         return $this;
     }

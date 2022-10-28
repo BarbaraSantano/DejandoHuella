@@ -16,6 +16,9 @@ class Socio
     #[ORM\Column]
     private ?int $cantidad = null;
 
+    #[ORM\OneToOne(mappedBy: 'socio', cascade: ['persist', 'remove'])]
+    private ?Usuario $usuario = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -29,6 +32,28 @@ class Socio
     public function setCantidad(int $cantidad): self
     {
         $this->cantidad = $cantidad;
+
+        return $this;
+    }
+
+    public function getUsuario(): ?Usuario
+    {
+        return $this->usuario;
+    }
+
+    public function setUsuario(?Usuario $usuario): self
+    {
+        // unset the owning side of the relation if necessary
+        if ($usuario === null && $this->usuario !== null) {
+            $this->usuario->setSocio(null);
+        }
+
+        // set the owning side of the relation if necessary
+        if ($usuario !== null && $usuario->getSocio() !== $this) {
+            $usuario->setSocio($this);
+        }
+
+        $this->usuario = $usuario;
 
         return $this;
     }
