@@ -12,10 +12,10 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Mime\Address;
+use Symfony\Component\Mailer\MailerInterface;
+use Symfony\Component\Mime\Email;
 use Symfony\Component\PasswordHasher\Hasher\UserPasswordHasherInterface;
 use Symfony\Component\Routing\Annotation\Route;
-use Symfony\Component\Security\Http\Authentication\UserAuthenticatorInterface;
-use Symfony\Component\Security\Http\Authenticator\FormLoginAuthenticator;
 use Symfony\Contracts\Translation\TranslatorInterface;
 use SymfonyCasts\Bundle\VerifyEmail\Exception\VerifyEmailExceptionInterface;
 
@@ -29,13 +29,7 @@ class RegistrationController extends AbstractController
     }
 
     #[Route('/register', name: 'app_register')]
-    public function register(
-        Request $request, 
-        UserPasswordHasherInterface $userPasswordHasher, 
-        EntityManagerInterface $entityManager, 
-        UserAuthenticatorInterface $userAuthenticator, 
-        FormLoginAuthenticator $formLoginAuthenticator
-    ): Response
+    public function register(Request $request, UserPasswordHasherInterface $userPasswordHasher, EntityManagerInterface $entityManager, MailerInterface $mailer): Response
     {
         $user = new Usuario();
         $form = $this->createForm(RegistrationFormType::class, $user);
@@ -53,23 +47,17 @@ class RegistrationController extends AbstractController
             $entityManager->persist($user);
             $entityManager->flush();
 
-            $userAuthenticator->authenticateUser(
-                $user,
-                $formLoginAuthenticator,
-                $request
-            );
-
             // generate a signed url and email it to the user
             $this->emailVerifier->sendEmailConfirmation('app_verify_email', $user,
                 (new TemplatedEmail())
-                    ->from(new Address('pruebasdejandohuella@gmail.com', 'pruebas'))
+                    ->from(new Address('pruebasdejandohuella@gmail.com', 'Pruebas Dejando Huella'))
                     ->to($user->getEmail())
                     ->subject('Please Confirm your Email')
                     ->htmlTemplate('registration/confirmation_email.html.twig')
             );
             // do anything else you need here, like send an email
 
-            return $this->redirectToRoute('app_profile');
+            return $this->redirectToRoute('app_login');
         }
 
         return $this->render('registration/register.html.twig', [
@@ -107,5 +95,3 @@ class RegistrationController extends AbstractController
         return $this->redirectToRoute('app_register');
     }
 }
-
-

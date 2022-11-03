@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b549b20c2001159ce933b5adfd5e5988",
+    "content-hash": "6cf0845cf30e87bc7280cb37abc82dbc",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -4385,16 +4385,16 @@
         },
         {
             "name": "symfony/mailer",
-            "version": "v6.1.5",
+            "version": "v6.1.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/mailer.git",
-                "reference": "e1b32deb9efc48def0c76b876860ad36f2123e89"
+                "reference": "7e19813c0b43387c55665780c4caea505cc48391"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/mailer/zipball/e1b32deb9efc48def0c76b876860ad36f2123e89",
-                "reference": "e1b32deb9efc48def0c76b876860ad36f2123e89",
+                "url": "https://api.github.com/repos/symfony/mailer/zipball/7e19813c0b43387c55665780c4caea505cc48391",
+                "reference": "7e19813c0b43387c55665780c4caea505cc48391",
                 "shasum": ""
             },
             "require": {
@@ -4439,7 +4439,7 @@
             "description": "Helps sending emails",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/mailer/tree/v6.1.5"
+                "source": "https://github.com/symfony/mailer/tree/v6.1.7"
             },
             "funding": [
                 {
@@ -4455,7 +4455,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-08-29T06:58:39+00:00"
+            "time": "2022-10-28T16:23:08+00:00"
         },
         {
             "name": "symfony/messenger",
@@ -7445,6 +7445,56 @@
                 }
             ],
             "time": "2022-10-07T08:04:03+00:00"
+        },
+        {
+            "name": "symfonycasts/reset-password-bundle",
+            "version": "v1.14.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/SymfonyCasts/reset-password-bundle.git",
+                "reference": "d906b72cff9a0683075041776a9c5e874df1918b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/SymfonyCasts/reset-password-bundle/zipball/d906b72cff9a0683075041776a9c5e874df1918b",
+                "reference": "d906b72cff9a0683075041776a9c5e874df1918b",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.2.5",
+                "symfony/config": "^4.4 | ^5.0 | ^6.0",
+                "symfony/dependency-injection": "^4.4 | ^5.0 | ^6.0",
+                "symfony/deprecation-contracts": "^2.2 | ^3.0",
+                "symfony/http-kernel": "^4.4 | ^5.0 | ^6.0"
+            },
+            "conflict": {
+                "doctrine/orm": "<2.7",
+                "symfony/framework-bundle": "<4.4",
+                "symfony/http-foundation": "<4.4"
+            },
+            "require-dev": {
+                "doctrine/doctrine-bundle": "^2.0.3",
+                "doctrine/orm": "^2.7",
+                "symfony/framework-bundle": "^4.4 | ^5.0 | ^6.0",
+                "symfony/phpunit-bridge": "^5.0 | ^6.0",
+                "vimeo/psalm": "^4.3"
+            },
+            "type": "symfony-bundle",
+            "autoload": {
+                "psr-4": {
+                    "SymfonyCasts\\Bundle\\ResetPassword\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Symfony bundle that adds password reset functionality.",
+            "support": {
+                "issues": "https://github.com/SymfonyCasts/reset-password-bundle/issues",
+                "source": "https://github.com/SymfonyCasts/reset-password-bundle/tree/v1.14.1"
+            },
+            "time": "2022-08-03T17:23:36+00:00"
         },
         {
             "name": "symfonycasts/verify-email-bundle",

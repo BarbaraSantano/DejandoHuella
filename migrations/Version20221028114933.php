@@ -38,6 +38,7 @@ final class Version20221028114933 extends AbstractMigration
         $this->addSql('CREATE UNIQUE INDEX UNIQ_2265B05D99A4D48E ON usuario (adopta_id)');
         $this->addSql('CREATE UNIQUE INDEX UNIQ_2265B05D82317B83 ON usuario (padrino_id)');
         $this->addSql('CREATE UNIQUE INDEX UNIQ_2265B05DDA04E6A9 ON usuario (socio_id)');
+        $this->addSql('ALTER TABLE usuario ADD is_verified TINYINT(1) NOT NULL');
     }
 
     public function down(Schema $schema): void

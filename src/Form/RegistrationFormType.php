@@ -43,13 +43,13 @@ class RegistrationFormType extends AbstractType
                     ]),
                 ],
             ])
-            ->add('telefono')
-            ->add('nombre')
-            ->add('apellido')
-            ->add('direccion')
-            ->add('fecha_nacimiento')
-            ->add('iban')
-        ;
+        ->add('telefono')
+        ->add('nombre')
+        ->add('apellido')
+        ->add('direccion')
+        ->add('fecha_nacimiento')
+        ->add('iban')
+    ;
     }
 
     public function configureOptions(OptionsResolver $resolver): void
