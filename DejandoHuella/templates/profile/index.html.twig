@@ -1,0 +1,10 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello ProfileController!{% endblock %}
+
+{% block body %}
+
+<h1>Profile</h1>
+<p>{{ app.user.email}}</p>
+<p><a href="{{ path('app_logout')}}"> Cerrar sesión</a></p>
+{% endblock %}
