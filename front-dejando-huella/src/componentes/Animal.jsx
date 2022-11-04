@@ -9,7 +9,7 @@ export default function Users() {
   useEffect(
     function () {
       fetchProyecto({
-        url: "http://localhost/DejandoHuella/back-dejando-huella/public/index.php/api/animals",
+        url: "http://localhost/DejandoHuella/DejandoHuella/public/index.php/api/animals",
 
         method: "GET"
       });
