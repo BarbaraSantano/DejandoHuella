@@ -85,6 +85,10 @@ class Usuario implements UserInterface, PasswordAuthenticatedUserInterface
         return $this->id;
     }
 
+    public function __toString() {
+        return $this->getNombre();
+    }
+
     public function getEmail(): ?string
     {
         return $this->email;
@@ -214,6 +218,7 @@ class Usuario implements UserInterface, PasswordAuthenticatedUserInterface
     {
         return $this->iban;
     }
+    
 
     public function setIban(string $iban): self
     {

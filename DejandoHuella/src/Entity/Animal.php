@@ -68,6 +68,10 @@ class Animal
         return $this->id;
     }
 
+    public function __toString() {
+        return $this->getNombre();
+    }
+
     public function getNombre(): ?string
     {
         return $this->nombre;

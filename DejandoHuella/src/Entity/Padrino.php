@@ -27,6 +27,24 @@ class Padrino
     #[ORM\ManyToMany(targetEntity: Animal::class, mappedBy: 'padrino')]
     private Collection $animals;
 
+    #[ORM\Column(length: 255)]
+    private ?string $nombre = null;
+
+    #[ORM\Column(length: 255)]
+    private ?string $apellido = null;
+
+    #[ORM\Column(length: 255)]
+    private ?string $email = null;
+
+    #[ORM\Column(length: 255)]
+    private ?string $telefono = null;
+
+    #[ORM\Column(length: 255)]
+    private ?string $direccion = null;
+
+    #[ORM\Column(length: 255)]
+    private ?string $fechaNacimiento = null;
+
     public function __construct()
     {
         $this->animals = new ArrayCollection();
@@ -35,6 +53,10 @@ class Padrino
     public function getId(): ?int
     {
         return $this->id;
+    }
+
+    public function __toString() {
+        return $this->getNombre();
     }
 
     public function getCantidad(): ?int
@@ -118,6 +140,78 @@ class Padrino
         if ($this->animals->removeElement($animal)) {
             $animal->removePadrino($this);
         }
+
+        return $this;
+    }
+
+    public function getNombre(): ?string
+    {
+        return $this->nombre;
+    }
+
+    public function setNombre(string $nombre): self
+    {
+        $this->nombre = $nombre;
+
+        return $this;
+    }
+
+    public function getApellido(): ?string
+    {
+        return $this->apellido;
+    }
+
+    public function setApellido(string $apellido): self
+    {
+        $this->apellido = $apellido;
+
+        return $this;
+    }
+
+    public function getEmail(): ?string
+    {
+        return $this->email;
+    }
+
+    public function setEmail(string $email): self
+    {
+        $this->email = $email;
+
+        return $this;
+    }
+
+    public function getTelefono(): ?string
+    {
+        return $this->telefono;
+    }
+
+    public function setTelefono(string $telefono): self
+    {
+        $this->telefono = $telefono;
+
+        return $this;
+    }
+
+    public function getDireccion(): ?string
+    {
+        return $this->direccion;
+    }
+
+    public function setDireccion(string $direccion): self
+    {
+        $this->direccion = $direccion;
+
+        return $this;
+    }
+
+    public function getFechaNacimiento(): ?string
+    {
+        return $this->fechaNacimiento;
+    }
+
+    public function setFechaNacimiento(string $fechaNacimiento): self
+    {
+        $this->fechaNacimiento = $fechaNacimiento;
 
         return $this;
     }
