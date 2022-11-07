@@ -9,8 +9,10 @@ export default function Users() {
   useEffect(
     function () {
       fetchProyecto({
-        url: "http://localhost/DejandoHuella/DejandoHuella/public/index.php/api/animals",
-
+        // ruta linux
+        url: "http://127.0.0.1:8000/api/animals",
+        // ruta Windows
+        //  url: "http://localhost/DejandoHuella/DejandoHuella/public/index.php/api/animals"
         method: "GET"
       });
     },
