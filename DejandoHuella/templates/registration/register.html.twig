@@ -7,6 +7,9 @@
         <div class="alert alert-danger" role="alert">{{ flash_error }}</div>
     {% endfor %}
 
+    <div class="container h-200 shadow p-3 mb-5 bg-body rounded position-absolute top-50 start-50 translate-middle">
+        <div class="row h-100 justify-content-center align-items-center">
+            <div class="col-10 bg-white rounded my-3 p-5">
     <h1>Register</h1>
 
     {{ form_start(registrationForm) }}
@@ -24,4 +27,8 @@
 
         <button type="submit" class="btn">Register</button>
     {{ form_end(registrationForm) }}
+
+          </div>
+        </div>
+    </div>
 {% endblock %}
