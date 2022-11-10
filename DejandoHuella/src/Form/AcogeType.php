@@ -16,15 +16,15 @@ class AcogeType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder
-            ->add('nombre')
             ->add('email', EmailType::class)
+            ->add('nombre')
             ->add('apellido')
             ->add('telefono')
             ->add('direccion')
             ->add('fechaNacimiento', BirthdayType::class)
             // ->add('usuario')
             ->add('animal')
-            ->add('submit', SubmitType::class)
+            ->add('Enviar', SubmitType::class)
         ;
     }
 

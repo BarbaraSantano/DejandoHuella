@@ -16,15 +16,15 @@ class AdoptaType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder
+            ->add('email', EmailType::class)
             ->add('nombre')
             ->add('apellido')
-            ->add('email', EmailType::class)
             ->add('telefono', NumberType::class)
             ->add('direccion')
             ->add('fechaNacimiento', BirthdayType::class)
             // ->add('usuario')
             ->add('animal')
-            ->add('submit', SubmitType::class)
+            ->add('Enviar', SubmitType::class)
         ;
     }
 

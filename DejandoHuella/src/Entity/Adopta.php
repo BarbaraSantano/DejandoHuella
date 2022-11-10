@@ -3,7 +3,9 @@
 namespace App\Entity;
 
 use App\Repository\AdoptaRepository;
+use DateTime;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints\DateTime as ConstraintsDateTime;
 
 #[ORM\Entity(repositoryClass: AdoptaRepository::class)]
 class Adopta
@@ -34,8 +36,8 @@ class Adopta
     #[ORM\Column(length: 255)]
     private ?string $direccion = null;
 
-    #[ORM\Column(length: 255)]
-    private ?string $fechaNacimiento = null;
+    #[ORM\Column(type:"datetime", nullable: true)]
+    private ?\DateTime $fechaNacimiento = null;
 
     public function getId(): ?int
     {
@@ -145,7 +147,7 @@ class Adopta
         return $this->fechaNacimiento;
     }
 
-    public function setFechaNacimiento(string $fechaNacimiento): self
+    public function setFechaNacimiento(DateTime $fechaNacimiento): self
     {
         $this->fechaNacimiento = $fechaNacimiento;
 

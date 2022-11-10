@@ -3,6 +3,7 @@
 namespace App\Entity;
 
 use App\Repository\AcogeRepository;
+use DateTime;
 use Doctrine\ORM\Mapping as ORM;
 
 #[ORM\Entity(repositoryClass: AcogeRepository::class)]
@@ -34,8 +35,8 @@ class Acoge
     #[ORM\Column(length: 255)]
     private ?string $direccion = null;
 
-    #[ORM\Column(length: 255)]
-    private ?string $fechaNacimiento = null;
+    #[ORM\Column(type:"datetime", nullable: true)]
+    private ?\DateTime  $fechaNacimiento = null;
 
     public function getId(): ?int
     {
@@ -145,7 +146,7 @@ class Acoge
         return $this->fechaNacimiento;
     }
 
-    public function setFechaNacimiento(string $fechaNacimiento): self
+    public function setFechaNacimiento(DateTime  $fechaNacimiento): self
     {
         $this->fechaNacimiento = $fechaNacimiento;
 

@@ -24,9 +24,10 @@
 }
 
 body {
-    background-image: url("../img/UI.png");
-    background-size: cover;
-    height: 500px;
+    /* background-image: url("../img/UI.png"); */
+    /* background-size: cover; */
+    /* height: 500px; */
+    background-image: linear-gradient(to top, #4f20d4 , #b755d4 , #32e891 ) !important;
     font-family: signikaregular;
 
 
@@ -40,10 +41,11 @@ h5,
 h6 {
     font-family: signikabold;
     color: #464d78;
+    
 }
 
 .navbar {
-    background-image: linear-gradient(to right, #000072 20%, #6060cd 100%) !important;
+    background-image: linear-gradient(to right, #4f20d4 20%, #b755d4 80%, #32e891 20%) !important;
     font-family: signikabold;
     font-size: 1.5em;
 }
@@ -97,4 +99,12 @@ h6 {
 
 #registrate {
     margin: 50px !important;
+}
+
+/*prueba estilos dejando huella*/
+#prueba{
+    margin-top: 10px;
+    margin-bottom: 50px;
+    text-align:center;
+   
 }

@@ -3,9 +3,12 @@
 namespace App\Entity;
 
 use App\Repository\PadrinoRepository;
+use DateTime;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
+use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 #[ORM\Entity(repositoryClass: PadrinoRepository::class)]
 class Padrino
@@ -34,16 +37,23 @@ class Padrino
     private ?string $apellido = null;
 
     #[ORM\Column(length: 255)]
+    #[Assert\Email()]
     private ?string $email = null;
 
     #[ORM\Column(length: 255)]
+    #[Assert\Length(
+        min: 9,
+        max: 9,
+        minMessage: 'Your first name must be at least {{ limit }} characters long',
+        maxMessage: 'Your first name cannot be longer than {{ limit }} characters',
+    )]
     private ?string $telefono = null;
 
     #[ORM\Column(length: 255)]
     private ?string $direccion = null;
 
-    #[ORM\Column(length: 255)]
-    private ?string $fechaNacimiento = null;
+    #[ORM\Column(type:"datetime", nullable: true)]
+    private ?\DateTime $fechaNacimiento = null;
 
     public function __construct()
     {
@@ -209,7 +219,7 @@ class Padrino
         return $this->fechaNacimiento;
     }
 
-    public function setFechaNacimiento(string $fechaNacimiento): self
+    public function setFechaNacimiento(DateTime $fechaNacimiento): self
     {
         $this->fechaNacimiento = $fechaNacimiento;
 
