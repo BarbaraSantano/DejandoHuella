@@ -56,6 +56,9 @@ class Animal
     #[ORM\ManyToMany(targetEntity: Padrino::class, inversedBy: 'animals')]
     private Collection $padrino;
 
+    #[ORM\Column(length: 255, nullable: true)]
+    private ?string $imagen = null;
+
     public function __construct()
     {
         $this->acoge = new ArrayCollection();
@@ -68,14 +71,15 @@ class Animal
         return $this->id;
     }
 
-    public function __toString() {
-        return $this->getNombre();
-    }
-
+ 
     public function getNombre(): ?string
     {
         return $this->nombre;
     }
+    public function __toString() {
+        return $this->getNombre();
+    }
+
 
     public function setNombre(string $nombre): self
     {
@@ -191,6 +195,17 @@ class Animal
 
         return $this;
     }
+    public function getImagen(): ?string
+    {
+        return $this->imagen;
+    }
+
+    public function setImagen(?string $imagen): self
+    {
+        $this->imagen = $imagen;
+
+        return $this;
+    }
 
     /**
      * @return Collection<int, Acoge>
@@ -281,4 +296,6 @@ class Animal
 
         return $this;
     }
+
+ 
 }

@@ -19,7 +19,9 @@
                 <th>Edad</th>
                 <th>Tamano</th>
                 <th>Descripcion</th>
-                <th>actions</th>
+                <th>Imagen</th>
+                <th>Acciones</th>
+
             </tr>
         </thead>
         <tbody>
@@ -36,6 +38,7 @@
                 <td>{{ animal.edad }}</td>
                 <td>{{ animal.tamano }}</td>
                 <td>{{ animal.descripcion }}</td>
+                <td>{{ animal.imagen }}</td>
                 <td>
                     <a href="{{ path('app_animal_show', {'id': animal.id}) }}">show</a>
                     <a href="{{ path('app_animal_edit', {'id': animal.id}) }}">edit</a>

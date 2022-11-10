@@ -7,7 +7,7 @@ use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
-class AnimalType extends AbstractType
+class Animal1Type extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
@@ -23,6 +23,7 @@ class AnimalType extends AbstractType
             ->add('tamano')
             ->add('descripcion')
             ->add('padrino')
+            ->add('imagen')
         ;
     }
 
