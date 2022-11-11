@@ -31,12 +31,7 @@ class PadrinoType extends AbstractType
                     'Súper Huella 15€' => '15€',
                 ],
             ] )
-            ->add('modalidad_pago',ChoiceType::class, [
-                'choices'  => [
-                    'Bizum' => 'bizum',
-                    'Transferencia' => 'tranferencia',
-                ],
-            ] )
+            ->add('iban' )
             // ->add('usuario')
             ->add('animals', null,  ['label'=> 'Mascota',])
             ->add('Enviar', SubmitType::class)

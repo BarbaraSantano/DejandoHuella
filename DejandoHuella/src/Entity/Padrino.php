@@ -19,9 +19,9 @@ class Padrino
     private ?int $id = null;
 
     #[ORM\Column]
-    private ?int $cantidad = null;
+    private ?string $cantidad = null;
 
-    #[ORM\Column(length: 255)]
+    #[ORM\Column(length: 255, nullable: true)]
     private ?string $modalidad_pago = null;
 
     #[ORM\OneToOne(mappedBy: 'padrino', cascade: ['persist', 'remove'])]
@@ -55,6 +55,12 @@ class Padrino
     #[ORM\Column(type:"datetime", nullable: true)]
     private ?\DateTime $fechaNacimiento = null;
 
+    #[ORM\Column(length: 255)]
+    #[Assert\Iban(
+        message: 'Este no es un número válido de cuenta bancaria internacional.(IBAN).',
+    )]
+    private ?string $iban = null;
+
     public function __construct()
     {
         $this->animals = new ArrayCollection();
@@ -69,12 +75,12 @@ class Padrino
         return $this->getNombre();
     }
 
-    public function getCantidad(): ?int
+    public function getCantidad(): ?string
     {
         return $this->cantidad;
     }
 
-    public function setCantidad(int $cantidad): self
+    public function setCantidad(string $cantidad): self
     {
         $this->cantidad = $cantidad;
 
@@ -222,6 +228,18 @@ class Padrino
     public function setFechaNacimiento(DateTime $fechaNacimiento): self
     {
         $this->fechaNacimiento = $fechaNacimiento;
+
+        return $this;
+    }
+
+    public function getIban(): ?string
+    {
+        return $this->iban;
+    }
+
+    public function setIban(string $iban): self
+    {
+        $this->iban = $iban;
 
         return $this;
     }

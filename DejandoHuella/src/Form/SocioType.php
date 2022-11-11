@@ -5,6 +5,7 @@ namespace App\Form;
 use App\Entity\Socio;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\BirthdayType;
+use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\FormBuilderInterface;
@@ -21,7 +22,16 @@ class SocioType extends AbstractType
             ->add('telefono')
             ->add('direccion')
             ->add('fechaNacimiento', BirthdayType::class)
-            ->add('cantidad')
+            ->add('cantidad',ChoiceType::class, [
+                'choices'  => [
+                    '3€' => '3€',
+                    '6€' => '6€',
+                    '9€' => '9€',
+                    '12€' => '12€',
+                    '15€' => '15€',
+                ],
+            ] )
+            ->add('iban' )
             // ->add('usuario')
             ->add('Enviar', SubmitType::class)
         ;
