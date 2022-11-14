@@ -5,6 +5,7 @@ namespace App\Entity;
 use App\Repository\AcogeRepository;
 use DateTime;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 #[ORM\Entity(repositoryClass: AcogeRepository::class)]
 class Acoge
@@ -30,6 +31,12 @@ class Acoge
     private ?string $apellido = null;
 
     #[ORM\Column(length: 255)]
+    #[Assert\Length(
+        min: 9,
+        max: 9,
+        minMessage: 'El número de teléfono debe contener {{ 9 }} carácteres',
+        maxMessage: 'El número de teléfono debe contener {{ 9 }}carácteres',
+    )]
     private ?string $telefono = null;
 
     #[ORM\Column(length: 255)]
@@ -37,6 +44,18 @@ class Acoge
 
     #[ORM\Column(type:"datetime", nullable: true)]
     private ?\DateTime  $fechaNacimiento = null;
+
+    #[ORM\Column(length: 255)]
+    private ?string $especie = null;
+
+    #[ORM\Column(length: 255)]
+    private ?string $etapa = null;
+
+    #[ORM\Column(length: 255)]
+    private ?string $tamano = null;
+
+    #[ORM\Column(length: 255)]
+    private ?string $sexo = null;
 
     public function getId(): ?int
     {
@@ -149,6 +168,54 @@ class Acoge
     public function setFechaNacimiento(DateTime  $fechaNacimiento): self
     {
         $this->fechaNacimiento = $fechaNacimiento;
+
+        return $this;
+    }
+
+    public function getEspecie(): ?string
+    {
+        return $this->especie;
+    }
+
+    public function setEspecie(string $especie): self
+    {
+        $this->especie = $especie;
+
+        return $this;
+    }
+
+    public function getEtapa(): ?string
+    {
+        return $this->etapa;
+    }
+
+    public function setEtapa(string $etapa): self
+    {
+        $this->etapa = $etapa;
+
+        return $this;
+    }
+
+    public function getTamano(): ?string
+    {
+        return $this->tamano;
+    }
+
+    public function setTamano(string $tamano): self
+    {
+        $this->tamano = $tamano;
+
+        return $this;
+    }
+
+    public function getSexo(): ?string
+    {
+        return $this->sexo;
+    }
+
+    public function setSexo(string $sexo): self
+    {
+        $this->sexo = $sexo;
 
         return $this;
     }

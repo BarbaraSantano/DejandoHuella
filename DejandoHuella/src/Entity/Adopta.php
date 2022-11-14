@@ -6,6 +6,7 @@ use App\Repository\AdoptaRepository;
 use DateTime;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints\DateTime as ConstraintsDateTime;
+use Symfony\Component\Validator\Constraints as Assert;
 
 #[ORM\Entity(repositoryClass: AdoptaRepository::class)]
 class Adopta
@@ -31,6 +32,12 @@ class Adopta
     private ?string $email = null;
 
     #[ORM\Column(length: 255)]
+    #[Assert\Length(
+        min: 9,
+        max: 9,
+        minMessage: 'El número de teléfono debe contener {{ 9 }} carácteres',
+        maxMessage: 'El número de teléfono debe contener {{ 9 }}carácteres',
+    )]
     private ?string $telefono = null;
 
     #[ORM\Column(length: 255)]

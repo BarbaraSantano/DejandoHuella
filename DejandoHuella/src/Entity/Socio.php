@@ -37,8 +37,8 @@ class Socio
     #[Assert\Length(
         min: 9,
         max: 9,
-        minMessage: 'El número de teléfono debe contener {{ 9 }} carácteres',
-        maxMessage: 'El número de teléfono debe contener {{ 9 }}carácteres',
+        minMessage: 'El número de teléfono debe contener {{ limit }} carácteres',
+        maxMessage: 'El número de teléfono debe contener {{ limit }} carácteres',
     )]
     private ?string $telefono = null;
 
