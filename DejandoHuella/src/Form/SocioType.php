@@ -19,9 +19,9 @@ class SocioType extends AbstractType
             ->add('email', EmailType::class)
             ->add('nombre')
             ->add('apellido')
-            ->add('telefono')
-            ->add('direccion')
-            ->add('fechaNacimiento', BirthdayType::class)
+            ->add('telefono',null,  ['label'=> 'Teléfono'])
+            ->add('direccion', null,  ['label'=> 'Dirección'])
+            ->add('fechaNacimiento', BirthdayType::class , ['label'=> 'Fecha de nacimiento'] )
             ->add('cantidad',ChoiceType::class, [
                 'choices'  => [
                     '3€' => '3€',

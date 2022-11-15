@@ -21,11 +21,11 @@ class AcogeType extends AbstractType
             ->add('email', EmailType::class)
             ->add('nombre')
             ->add('apellido')
-            ->add('telefono')
-            ->add('direccion')
-            ->add('fechaNacimiento', BirthdayType::class)
+            ->add('telefono',null,  ['label'=> 'Teléfono'])
+            ->add('direccion', null,  ['label'=> 'Dirección'])
+            ->add('fechaNacimiento', BirthdayType::class , ['label'=> 'Fecha de nacimiento'] )
             // ->add('usuario')
-            ->add('animal')
+          
             ->add('especie',ChoiceType::class,  [
                 'choices'  => [
                     'Perro' => 'perro',
@@ -40,7 +40,8 @@ class AcogeType extends AbstractType
                     'Enfermo' => 'enfermo',
                 ],
             ] )
-            ->add('tamano',ChoiceType::class, [
+            ->add('tamano' ,ChoiceType::class, [
+                'label' => "Tamaño",
                 'choices'  => [
                     'Pequeño' => 'pequeno',
                     'Mediano' => 'mediano',
@@ -54,6 +55,7 @@ class AcogeType extends AbstractType
                     'Macho' => 'macho',
                 ],
             ] )
+            ->add('animal', null,  ['label'=> 'Si quieres acoger a una de nuestras mascotas en especial, elige su nombre en la lista',])
             ->add('Enviar', SubmitType::class)
         ;
     }
