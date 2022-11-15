@@ -1,11 +1,10 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello AcogeController!{% endblock %}
+{% block title %}Formulario de Acogida{% endblock %}
 
 {% block body %}
 
 
-{# <div class="container h-100"> #}
         <div class="row h-100 justify-content-center align-items-center">
             <div class="col-6 shadow bg-white rounded my-3 p-5">
                 <h1 id="prueba">Formulario de Acogida</h1>
@@ -14,52 +13,5 @@
 
             </div>
         </div>
-    {# </div> #}
-
-{# {{form_start(form_acoge)}}
-
-<div class="container-sm shadow p-3 mb-5 bg-body rounded position-absolute top-50 start-50 translate-middle">
-<div class="row h-100 justify-content-center align-items-center ">
-  <div class="col-6 bg-white rounded my-3 p-5">
-    <div class="form-floating mb-3">
-    {{form_label(form_acoge.email, "Email" )}}
-    </div>
-    {{form_widget(form_acoge.email)}}
-  </div>
-
-  <div class="col-6 bg-white rounded my-3 p-5">
-    {{form_label(form_acoge.telefono, "Telefono" )}}
-    {{form_widget(form_acoge.telefono)}}
-  </div>
-</div>
-<div class="row h-100 justify-content-center align-items-center ">
-  <div class="col-6 bg-white rounded my-3 p-5">
-    {{form_label(form_acoge.nombre, "Nombre" )}}
-    {{form_widget(form_acoge.nombre)}}
-  </div>
-  <div class="col-6 bg-white rounded my-3 p-5">
-    {{form_label(form_acoge.apellido, "Apellido" )}}
-    {{form_widget(form_acoge.apellido)}}
-  </div>
-</div>
-<div class="col-6 bg-white rounded my-3 p-5">
-  {{form_label(form_acoge.direccion, "Direccion" )}}
-  {{form_widget(form_acoge.direccion)}}
-</div>
-<div class="row h-100 justify-content-center align-items-center ">
-  <div class="col-6 bg-white rounded my-3 p-5">
-    {{form_label(form_acoge.fechaNacimiento, "Fecha de nacimiento" )}}
-    {{form_widget(form_acoge.fechaNacimiento)}}
-  </div>
-  <div class="col-6 bg-white rounded my-3 p-5">
-    {{form_label(form_acoge.animal, "Mascota" )}}
-    {{form_widget(form_acoge.animal)}}
-  </div>
-  <div class="mb-3">
-  <input type="submit" class="form-control" id="exampleFormControlInput1" placeholder="Enviar">
-</div>
-</div>
-</div>
-{{form_end(form_acoge)}} #}
-
+   
 {% endblock %}

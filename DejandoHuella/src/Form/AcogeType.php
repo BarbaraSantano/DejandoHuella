@@ -12,6 +12,8 @@ use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Component\Validator\Constraints\IsTrue;
+use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
 
 class AcogeType extends AbstractType
 {
@@ -56,6 +58,15 @@ class AcogeType extends AbstractType
                 ],
             ] )
             ->add('animal', null,  ['label'=> 'Si quieres acoger a una de nuestras mascotas en especial, elige su nombre en la lista',])
+            ->add('agreeTerms', CheckboxType::class, [
+                'label' => "Acepto los términos y condiciones",
+                'mapped' => false,
+                'constraints' => [
+                    new IsTrue([
+                        'message' => 'Debes aceptar los términos y condiciones para continuar.',
+                    ]),
+                ],
+            ])
             ->add('Enviar', SubmitType::class)
         ;
     }

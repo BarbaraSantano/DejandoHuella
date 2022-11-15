@@ -10,6 +10,8 @@ use Symfony\Component\Form\Extension\Core\Type\NumberType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Component\Validator\Constraints\IsTrue;
+use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
 
 class AdoptaType extends AbstractType
 {
@@ -24,6 +26,15 @@ class AdoptaType extends AbstractType
             ->add('fechaNacimiento', BirthdayType::class , ['label'=> 'Fecha de nacimiento'])
             // ->add('usuario')
             ->add('animal',null, ['label'=> 'Mascota'])
+            ->add('agreeTerms', CheckboxType::class, [
+                'label' => "Acepto los términos y condiciones",
+                'mapped' => false,
+                'constraints' => [
+                    new IsTrue([
+                        'message' => 'Debes aceptar los términos y condiciones para continuar.',
+                    ]),
+                ],
+            ])
             ->add('Enviar', SubmitType::class)
         ;
     }
