@@ -1,14 +1,15 @@
 
 import './App.css';
-import Animal from './componentes/Animal';
 import Navbar from './componentes/Navbar.jsx';
+import Video from './componentes/Video.jsx';
 
 
 function App() {
   return (
     <div className="App">
      <Navbar />
-     <Animal/>
+     <Video />
+  
      
 
     </div>

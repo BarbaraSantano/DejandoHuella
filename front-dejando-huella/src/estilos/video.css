@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2? family= Amatic+SC:wght@400;700 & display=swap');
+
+
+
+
+.video {
+    width: 100%;
+    height: 95vh;
+    padding-top: 5vh;
+}
+
+video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;;
+}
+
+.info-content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: rgb(250, 248, 248);
+}
+
+
+  
+
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 85vh;
+
+}
+
+.info-content h2 {
+    font-family:'Amatic SC', cursiva;
+    font-size: 50px;
+    font-weight: 300;
+    text-align: center;
+    padding-block: none;
+   
+
+}
+
+
+.info-content h4 {
+    font-size: 2.5em;
+    color: #ffffff;
+    text-align: center;
+    font-family: 'Amatic SC', sans-serif;
+    
+}
+
+.info-content h1 {
+    font-size: 3.5em;
+    color: #ffffff;
+    text-align: center;
+    font-family: 'Amatic SC', sans-serif;
+}
+
+@media only screen and (max-width: 1200px) {
+
+    .video .info-content p {
+        padding-left: 25vh;
+        padding-right: 25vh;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+
+    .video .info-content p {
+        padding-left: 15vh;
+        padding-right: 15vh;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+
+    .video .info-content p {
+        padding-left: 5vh;
+        padding-right: 5vh;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+
+    .trendingNews img {
+        width: 100%;
+        height: 300px;
+    }
+}

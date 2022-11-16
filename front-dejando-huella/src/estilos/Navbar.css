@@ -7,7 +7,9 @@
     z-index: 1;
     transition: .3s ease-in;
     overflow: hidden;
-    background-color: #B755DA;
+    background: -webkit-linear-gradient(left,#6469ED,#32E891);
+
+    
     font-family: 'Amatic SC', cursiva;
 }
 
@@ -46,14 +48,15 @@
 }
 
 .header .nav-item {
-    padding: 2rem;
+    padding: 40px;
+    margin: auto;
     font-weight: 400;
 }
 
 .header .nav-item a:hover {
     padding-bottom: 12px;
     border-bottom: 3px solid var(--secondary-color);
-    color: magenta;
+    color: #6469ED;
 }
 
 .hamburger {

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import logo from '../media/logo-horizontal.png';
 import '../estilos/Navbar.css';
+import Boton from './Boton';
 
 const Navbar = () => {
 
@@ -55,7 +56,11 @@ const Navbar = () => {
                         <a href='#contactanos' onClick={closeMenu}>CONTACTO</a>
                     </li>
                     <li className='nav-item'>
-                        <a href='#colabora' onClick={closeMenu}>COLABORA</a>
+                        <div className="contenedor-boton">
+                        <Boton
+                         texto='Colabora' />
+                        </div>
+                        
                     </li>
                 </ul>
             </nav>
