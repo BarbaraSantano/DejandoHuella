@@ -8,16 +8,12 @@
     transition: .3s ease-in;
     overflow: hidden;
     background: -webkit-linear-gradient(left,#6469ED,#32E891);
-
-    
     font-family: 'Amatic SC', cursiva;
 }
 
 .header-bg{
     /*background-color: rgba(0,0,0,.9);*/
     background-color: #5000DF;
-    opacity: 54%;
-    
 }
 
 .header .navbar {
