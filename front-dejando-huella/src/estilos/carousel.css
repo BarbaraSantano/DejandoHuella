@@ -1,0 +1,53 @@
+.prueba{
+  position: relative;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  padding-bottom: 20px;
+}
+.trendingNews {
+    position: relative;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    padding-bottom: 20px; 
+   
+  }
+  .trendingNews img {
+    width:1000px;
+    height: 600px;
+    object-fit: cover;
+	  box-shadow: 0 0 4px magenta;
+    border-radius: 10px;
+  }
+  .sliderCont {
+    display: flex;
+  }
+  .slide {
+    opacity: 0;
+    transition-duration: 1s ease;
+  } 
+  .slide.active {
+    opacity: 1;
+    transition-duration: 1s;
+  }
+  
+  @media all and (max-width: 600px) {
+    .trendingNews img {
+     width: 100%; 
+     height: 260px;
+     padding: 10px;     
+  }
+    .trendingFilms {
+      display: flex;
+      align-items: center;
+    }
+    .sliderCont {
+      display: flex;
+      
+    }
+  }
+
+
+
+
