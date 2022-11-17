@@ -3,9 +3,10 @@
 {% block title %}Animal{% endblock %}
 
 {% block body %}
-    <h1>Animal</h1>
+    <h1 id="tituloCentrado">{{ animal.nombre }}</h1>
 
-    <table class="table">
+    <div class="contenedor">
+    <table class="table" id ="tableShow">
         <tbody>
             <tr>
                 <th>Id</th>
@@ -16,7 +17,7 @@
                 <td>{{ animal.nombre }}</td>
             </tr>
             <tr>
-                <th>Fecha_nacimiento</th>
+                <th>Fecha de nacimiento</th>
                 <td>{{ animal.fechaNacimiento }}</td>
             </tr>
             <tr>
@@ -44,11 +45,11 @@
                 <td>{{ animal.edad }}</td>
             </tr>
             <tr>
-                <th>Tamano</th>
+                <th>Tamaño</th>
                 <td>{{ animal.tamano }}</td>
             </tr>
             <tr>
-                <th>Descripcion</th>
+                <th>Descripción</th>
                 <td>{{ animal.descripcion }}</td>
             </tr>
             <tr>
@@ -58,9 +59,11 @@
         </tbody>
     </table>
 
-    <a href="{{ path('app_animal_index') }}">back to list</a>
+    <a id="botonCrear" href="{{ path('app_animal_index') }}">Volver al listado</a>
 
-    <a href="{{ path('app_animal_edit', {'id': animal.id}) }}">edit</a>
+    <a id="botonCrear" href="{{ path('app_animal_edit', {'id': animal.id}) }}">Editar</a>
 
     {{ include('animal/_delete_form.html.twig') }}
+
+    </div>
 {% endblock %}

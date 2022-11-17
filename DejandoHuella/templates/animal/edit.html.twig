@@ -3,11 +3,14 @@
 {% block title %}Edit Animal{% endblock %}
 
 {% block body %}
-    <h1>Edit Animal</h1>
+    <h1 id="tituloCentrado">Editar: {{ animal.nombre }}</h1>    
+    <div class="contenedor">
 
-    {{ include('animal/_form.html.twig', {'button_label': 'Update'}) }}
+        {{ include('animal/_form.html.twig', {'button_label': 'Guardar'}) }}
+    
+        <a  id="botonCrear" href="{{ path('app_animal_index') }}">Volver al listado</a>
 
-    <a href="{{ path('app_animal_index') }}">back to list</a>
+        {{ include('animal/_delete_form.html.twig') }}
+</div>
 
-    {{ include('animal/_delete_form.html.twig') }}
 {% endblock %}
