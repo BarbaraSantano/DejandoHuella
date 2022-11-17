@@ -2,7 +2,7 @@
 import './App.css';
 import Navbar from './componentes/Navbar.jsx';
 import Video from './componentes/Video.jsx';
-import Carrousel from './componentes/Carrousel';
+
 
 
 function App() {
@@ -10,7 +10,7 @@ function App() {
     <div className="App">
      <Navbar />
      <Video />
-     <Carrousel/>
+    
   
      
 
