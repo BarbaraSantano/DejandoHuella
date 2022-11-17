@@ -40,13 +40,17 @@
                 <td>{{ animal.descripcion }}</td>
                 <td>{{ animal.imagen }}</td>
                 <td>
+                 <button>
                     <a href="{{ path('app_animal_show', {'id': animal.id}) }}">show</a>
+                     <button/>
                     <a href="{{ path('app_animal_edit', {'id': animal.id}) }}">edit</a>
                 </td>
             </tr>
         {% else %}
             <tr>
+           
                 <td colspan="12">no records found</td>
+               
             </tr>
         {% endfor %}
         </tbody>
