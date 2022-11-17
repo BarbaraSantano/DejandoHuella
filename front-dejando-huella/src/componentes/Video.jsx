@@ -14,10 +14,7 @@ const video = () => {
         
         <h2><strong>Dejando huella Albacete</strong></h2>
         
-        
           <h4> Ayuda y rescate de animales en situación de peligro</h4>
-       
-        
        
         <div className="contenedor-boton">
           <Boton

@@ -7,7 +7,7 @@
     z-index: 1;
     transition: .3s ease-in;
     overflow: hidden;
-    background: -webkit-linear-gradient(left,#6469ED,#32E891);
+    background: -webkit-linear-gradient(left,#4ed941,#7d81fd);
 
     
     font-family: 'Amatic SC', cursiva;
@@ -37,8 +37,9 @@
 }
 
 .header .navbar img {
-    width: 90px;
-    height: auto;
+    width: 95px;
+    height:95px;
+    
     
 }
 
@@ -56,7 +57,9 @@
 .header .nav-item a:hover {
     padding-bottom: 12px;
     border-bottom: 3px solid var(--secondary-color);
-    color: #6469ED;
+    color: #0be139;
+    font-size: 40px;
+
 }
 
 .hamburger {
@@ -103,7 +106,7 @@
 
     .header .navbar img {
         width: 100px;
-        display: flex;
+        display:flex;
         justify-content: center;
     }
 }

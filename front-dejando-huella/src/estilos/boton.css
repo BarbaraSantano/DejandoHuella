@@ -1,12 +1,9 @@
 .btn {
-	background: #94ebae;
+	background: #72f367;
+	
 
 	/* Crear degradados */
-	background-image: -webkit-linear-gradient(left, #efa9ef, #6fd8bc color);
-	background-image: -moz-linear-gradient(left, #efa9ef, #86cdab);
-	background-image: -ms-linear-gradient(left, #6a13ee#86cdab, #86cdab);
-	background-image: -o-linear-gradient(left, #86cdab, #86cdab);
-	background-image: linear-gradient(to right, #e24cf3, #86cdab);
+	
 	/* Dar bordes curvados a btn */
 	
 	-webkit-border-radius: 15;
@@ -17,12 +14,13 @@
 	-moz-box-shadow: 6px 5px 24px #666666;
 	box-shadow: 6px 5px 24px #666666;
 	font-family: 'Amatic Sc';
-	color: #fafafa;
+	color: #5e62d8;
 	font-size: 40px;
 	font-weight: bold;
     padding: 35px;
     padding-bottom: 10px;
     padding-top: 10px;
+	margin: 50px;
 	text-decoration: none;
 	
     
@@ -30,12 +28,13 @@
 }
 
 .btn:hover {
-	background: #2079b0;
-	background-image: -webkit-linear-gradient(left, #bd05eb, #6469ED);
-	background-image: -moz-linear-gradient(left, #bd05eb, #6469ED);
-	background-image: -ms-linear-gradient(left, #bd05eb, #6469ED);
-	background-image: -o-linear-gradient(left, #bd05eb, #6469ED);
-	background-image: linear-gradient(to right, #bd05eb, #6469ED);
+	color: #fafafa;
+	background: #58f079;
+	background-image: -webkit-linear-gradient(left, #f114db, #6fed64);
+	background-image: -moz-linear-gradient(left, #eb05b9, #6fed64);
+	background-image: -ms-linear-gradient(left, #ed32d4, #6fed64);
+	background-image: -o-linear-gradient(left, #e313c3, #6fed64);
+	background-image: linear-gradient(to right, #e914cc, #6fed64);
 	text-decoration: none;
 }
 

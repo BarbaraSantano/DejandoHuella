@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2? family= Amatic+SC:wght@400;700 & display=swap');
+@import url('https://fonts.googleapis.com/css2? family= Dancing+Script:wght@500 & display=swap');
 
 
 
@@ -22,7 +23,7 @@ video {
     top: 0;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content:end;
     align-items: center;
     color: rgb(250, 248, 248);
 }
@@ -36,15 +37,15 @@ video {
     top: 0;
     left: 0;
     width: 100%;
-    height: 85vh;
+    height: 75vh;
 
 }
 
 .info-content h2 {
     font-family:'Amatic SC', cursiva;
-    font-size: 50px;
-    font-weight: 300;
-    text-align: center;
+    font-size: 60px;
+    font-weight: 200;
+    text-align:center;
     padding-block: none;
    
 
@@ -52,10 +53,10 @@ video {
 
 
 .info-content h4 {
-    font-size: 2.5em;
+    font-size: 45px;
     color: #ffffff;
     text-align: center;
-    font-family: 'Amatic SC', sans-serif;
+    font-family: 'Dancing Script', cursive;
     
 }
 
