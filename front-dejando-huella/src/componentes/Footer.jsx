@@ -9,15 +9,15 @@ import logo from  '../media/logo_footer.png';
 export const Footer = () => {
   return (
 
-    <footer class="footer"  >
-      <ul class="item">
-        <li class="navitem"><a href="#">< img src= {facebook}/></a></li>
-        <li class="navitem"><a href="#">< img src= {youtube}/></a></li>
-        <li class="navitem_logo"><a href="#">< img src= {logo}/></a></li>
-        <li class="navitem"><a href="#">< img src= {insta}/></a></li>
-        <li class="navitem"><a href="#">< img src= {twitter}/></a></li>
+    <footer>
+      <ul class="footer-menu-container">
+        <li class="social-icon"><a href="#">< img src= {facebook}/></a></li>
+        <li class="social-icon"><a href="#">< img src= {youtube}/></a></li>
+        <li class="social-icon"><a href="#">< img class="logo" src= {logo}/></a></li>
+        <li class="social-icon"><a href="#">< img src= {insta}/></a></li>
+        <li class="social-icon"><a href="#">< img src= {twitter}/></a></li>
       </ul>
-      <p class="text-center text-muted">&copy; 2022 Company, Inc</p>
+      <p class="copyright">&copy; ASOCIACIÓN EN DEFESENSA DE LOS ANIMALES - DEJANDO HUELLA ALBACETE - G55585457</p>
     </footer>
   
   )
