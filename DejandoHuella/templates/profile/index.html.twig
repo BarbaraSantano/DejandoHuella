@@ -4,7 +4,7 @@
 
 {% block body %}
 
-<h1>Profile</h1>
-<p>{{ app.user.email}}</p>
-<p><a href="{{ path('app_logout')}}"> Cerrar sesión</a></p>
+<h1 id="tituloCentrado">Mi perfil </h1>
+<p id="tituloCentrado">{{ app.user.email}}</p>
+<p><a  id="botonCrear" href="{{ path('app_logout')}}"> Cerrar sesión</a></p>
 {% endblock %}
