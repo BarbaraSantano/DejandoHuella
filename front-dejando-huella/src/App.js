@@ -4,6 +4,7 @@ import Navbar from './componentes/Navbar.jsx';
 import Video from './componentes/Video.jsx';
 import Carrousel from './componentes/Carrousel.jsx';
 import Animal from './componentes/Animal.jsx';
+import { Footer } from './componentes/Footer';
 
 function App() {
   return (
@@ -13,7 +14,7 @@ function App() {
      <Carrousel/>
      <Animal/>
     
-  
+    < Footer/>
      
 
     </div>
