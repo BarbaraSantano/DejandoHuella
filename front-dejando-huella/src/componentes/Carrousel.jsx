@@ -9,7 +9,7 @@ export const Carrousel = () => {
   const [current, setCurrent] = useState(0);
   const handleClick = () => {
     //esta ruta solo es para probar si funcionan enlace externos y esta OK
-    window.open('http://localhost/DejandoHuella/DejandoHuella/public/index.php/register', '_blank')
+    window.open('http://localhost/DejandoHuella/DejandoHuella/public/index.php/socio', '_blank')
   }
 
   const [newsList, setNewsList] = useState([
@@ -85,7 +85,7 @@ export const Carrousel = () => {
           </div>
         ) : null}
 
-<button className="btn" onClick={handleClick} >Ir a Registro </button>
+<button className="btn" onClick={handleClick} >Hazte Socio/a </button>
 
       </div>
       

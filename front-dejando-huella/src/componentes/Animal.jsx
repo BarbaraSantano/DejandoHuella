@@ -35,10 +35,13 @@ export default function Users() {
 					return(
                         
 						
-								<div className='face' key={card.id}>
+								<div className='content' key={card.id}>
                      
- 
-                                <h3>{card.nombre} {card.descripcion}</h3>
+                     <img src={(`../media/${card.imagen}`)}
+                                className='frontal' 
+                                alt=""/>
+                                <h1>{card.nombre}<br></br> {card.descripcion}</h1>
+                              
                               
                      </div>
                         				
