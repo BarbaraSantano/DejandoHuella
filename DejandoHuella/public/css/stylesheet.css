@@ -27,9 +27,9 @@ body {
     /* background-image: url("../img/UI.png"); */
     /* background-size: cover; */
     /* height: 500px; */
-    background-image: linear-gradient(to top, #4f20d4 , #b755d4 , #32e891 ) !important;
-    background-repeat: no-repeat;
-    font-family: signikaregular;
+     background-image: linear-gradient(to top, #32e891 , white ) !important;
+     background-repeat: no-repeat;
+     font-family: signikaregular;
     -moz-background-repeat: no-repeat;
     -webkit-background-repeat: no-repeat;
     -o-background-repeat: no-repeat;
@@ -72,6 +72,8 @@ h1
        margin-bottom: 50px;
        margin-top: 50px;
        background-color: white;
+      
+       
    
    }
 
