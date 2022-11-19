@@ -33,6 +33,8 @@ body {
     -moz-background-repeat: no-repeat;
     -webkit-background-repeat: no-repeat;
     -o-background-repeat: no-repeat;
+    align-items: center;
+    justify-content: center !important;
 
 
 
