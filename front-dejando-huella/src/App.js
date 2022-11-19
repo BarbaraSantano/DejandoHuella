@@ -2,6 +2,7 @@
 import './App.css';
 import Navbar from './componentes/Navbar.jsx';
 import Video from './componentes/Video.jsx';
+import CardBoton from './componentes/CardBoton.jsx';
 import Carrousel from './componentes/Carrousel.jsx';
 import Animal from './componentes/Animal.jsx';
 import { Footer } from './componentes/Footer';
@@ -12,6 +13,7 @@ function App() {
     <div className="App">
      <Navbar />
      <Video />
+     <CardBoton/>
      <Carrousel/>
      <Animal/>
      <Conocenos />
