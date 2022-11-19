@@ -1,12 +1,12 @@
 @import url('https://fonts.googleapis.com/css2? family= Amatic+SC:wght@400;700 & display=swap');
 .contenedor-testimonio{
-    width: 1400px;
-    height: 368px;
-    margin: 10px 10px 50px;
+   margin: 50px;
+    position: relative;
+    justify-content: center;
     display: flex;
     align-items: center;
-    justify-content: center;
-    background-color: #fff;
+    padding: 20px;
+    background-color:white;
     box-shadow: 0 3px 13px 1px rgba(0 0 0 /9%);
 }
 
@@ -40,4 +40,33 @@
 .texto-testimonio {
     font-size:1.1rem;
     text-align: justify;
+   
 }
+@media all and (max-width: 600px) {
+    .contenedor-testimonio{
+        width:auto;
+        flex-wrap: wrap;
+    }
+    .imagen-testimonio {
+     width: 50%; 
+     height: 100px;
+        
+  }
+  .texto-testimonio {
+      display: flex;
+      align-items:center;
+      
+    }
+    .titulo-testimonio {
+      display: flex;
+      font-size: 30px;
+      margin-top: 5px; 
+      
+    }
+    .subtitulo-testimonio {
+        font-size: 20px;
+        margin-top: 5px;
+        padding: 20px;
+        text-align: center;
+    }
+  }
