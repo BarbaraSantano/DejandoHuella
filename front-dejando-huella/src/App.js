@@ -5,6 +5,7 @@ import Video from './componentes/Video.jsx';
 import Carrousel from './componentes/Carrousel.jsx';
 import Animal from './componentes/Animal.jsx';
 import { Footer } from './componentes/Footer';
+import Conocenos from './componentes/Conocenos.jsx';
 
 function App() {
   return (
@@ -13,7 +14,7 @@ function App() {
      <Video />
      <Carrousel/>
      <Animal/>
-    
+     <Conocenos />
     < Footer/>
      
 
