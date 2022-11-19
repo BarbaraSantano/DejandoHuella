@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2? family= Amatic+SC:wght@400;700 & display=swap');
+.contenedor-testimonio{
+    width: 1400px;
+    height: 368px;
+    margin: 10px 10px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    box-shadow: 0 3px 13px 1px rgba(0 0 0 /9%);
+}
+
+.imagen-testimonio {
+    height: 100%;
+    width: 500px;
+}
+
+.contenedor-texto-testimonio {
+    text-align: center;
+    padding: 40px;
+    font-family: Amatic SC, cursiva;
+    font-weight: 400;
+    line-height: 1.5rem;
+    align-items: center;
+    
+}
+
+.titulo-testimonio {
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+.subtitulo-testimonio {
+    font-size: 1.9rem;
+    margin-top: 15px;
+    padding: 30px;
+    text-align: center;
+}
+
+.texto-testimonio {
+    font-size:1.1rem;
+    text-align: justify;
+}
