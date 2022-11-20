@@ -30,6 +30,9 @@ export default function Users() {
   if (state.isSuccess) {
     return (
 	    <div className="container">
+        <h2>PERROS</h2>
+        <img src="../media/pepito.png"/>
+        
 			{
 				 state.data.map(card=>{
 					return(
@@ -41,8 +44,7 @@ export default function Users() {
                                 className='frontal' 
                                 alt=""/>
                                 <h1>{card.nombre}<br></br> {card.descripcion}</h1>
-                              
-                              
+       
                      </div>
                         				
 					)

@@ -1,6 +1,17 @@
 
-.content img{
-	max-width: 1000px;
+.container{
+	margin: 50px;
+    position: relative;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background-color:white;
+    box-shadow: 0 3px 13px 1px rgba(0 0 0 /9%);
+
+}
+.frontal{
+	max-width: 100%;
 	margin: 10px auto;
 	display: flex;
 	flex-direction: row;
