@@ -1,22 +1,24 @@
 
 .container{
-	margin: 50px;
-    position: relative;
-    justify-content: center;
-    display: flex;
-    align-items: center;
-    padding: 20px;
-    background-color:white;
-    box-shadow: 0 3px 13px 1px rgba(0 0 0 /9%);
-
-}
-.frontal{
-	max-width: 100%;
-	margin: 10px auto;
-	display: flex;
+	display:flex;
 	flex-direction: row;
 	flex-wrap: wrap;
-	justify-content: center;	
-	border-radius: 15px; 
+	justify-content:center;	
+	align-items: baseline;
+	margin: 10px auto;
+    background-color:white;
+    box-shadow: 0 3px 13px 1px rgba(0 0 0 /9%);
+}
+.frontal{
+	height: 100%;
+    width: 400px;
+
+	margin: 10px auto;
+	padding: 40px;
+	border-radius: 10px;
+    box-shadow: 0 3px 13px 1px rgba(0 0 0 /9%);
+	 
+	
 
 }
+
