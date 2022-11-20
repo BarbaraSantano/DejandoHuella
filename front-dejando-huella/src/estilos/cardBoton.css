@@ -1,45 +1,32 @@
 @import url('https://fonts.googleapis.com/css2? family= Amatic+SC:wght@400;700 & display=swap');
 @import url('https://fonts.googleapis.com/css2? family= Dancing+Script:wght@500 & display=swap');
 
-.colaboraciones{
-	max-width: 1200px;
-	margin: 10px auto;
-	display: flex;
+
+
+
+.caja{
+	
+	max-width: 80%;
+	display:flex;
 	flex-direction: row;
 	flex-wrap: wrap;
-	justify-content:center;	 
-	font-family: 'Amatic SC', cursive; 
-	color:#6469ED;
+	justify-content:center;	
+	align-items: baseline;
 	
+	
+	margin: 10px auto;
+	/*box-shadow: 2px 2px 5px #999;*/
+}
+.imagen{
+	width: 100%;
+	height: 100%;
 }
 
-.nombre{
-	
-	padding: 10px;
-	padding-bottom: 20px;
-	padding-top: 20px;
-	font-size: 40px;
-	
-} 
 
-.otra{
-	
-	border: none;
-	
-	
-}
-@media screen and (max-width: 1278px) {
 
-	.colaboraciones {
-		width: 100%;
-		height: 135%;
-		display: flex;
-		flex-direction: row;
-		flex-wrap: wrap;
-		position: absolute;
-		justify-content: center;
-		align-content: flex-start;
-	}
 
-}
+
+ 
+
+
 

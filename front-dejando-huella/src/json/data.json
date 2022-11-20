@@ -2,71 +2,43 @@
     {
         "id": "1",
             "imagen": "acogida1.png",
-            "titulo": " " ,
             "enlace":"http://www.lostejos.com"
 
     },
     {
         "id": "2",
             "imagen": "huchas1.png",
-            "enlace":"http://www.google.com"
-             
+            "enlace":"http://www.google.com"         
     },
 
     {
         "id": "3",
             "imagen": "eventos1.png",  
-            "enlace":"https://api-platform.com/"
-            
+            "enlace":"https://api-platform.com/"         
     },
     {
         "id": "4",
-            "imagen": "voluntario1.png" ,
-            "enlace":"https://symfony.com/doc/current/index.html"
-            
-               
+            "imagen": "voluntario1.png", 
+            "enlace":"https://api-platform.com/"             
     },
     {
         "id": "5",
-        "imagen": "corazon.png" ,
-        "titulo": "Si no puedes adoptar, puedes ayudarnos de otra forma!" 
-         
-               
+            "imagen": "teamer1.png" ,
+            "enlace":"http://www.lostejos.com"     
     },
- 
     {
         "id": "6",
-            "imagen": "teamer1.png" ,
-            "enlace":"http://www.lostejos.com"
-            
+            "imagen": "socios1.png",
+            "enlace":"http://www.google.com"              
     },
     {
         "id": "7",
-            "imagen": "socios1.png",
-            "enlace":"http://www.google.com"
-            
-               
+            "imagen": "padrinos1.png" ,
+            "enlace":"https://api-platform.com/"      
     },
     {
         "id": "8",
-            "imagen": "padrinos1.png" ,
-            "enlace":"https://api-platform.com/" 
-           
-    },
-    {
-        "id": "9",
             "imagen": "dona1.png",
-            "enlace":"https://symfony.com/doc/current/index.html"
-           
-               
-    },
-    {
-        "id": "10",
-            
-            "titulo": "Deja tu huella  "  
-               
+            "enlace":"https://symfony.com/doc/current/index.html"        
     }
-   
-
-
 ]
