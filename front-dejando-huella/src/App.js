@@ -14,9 +14,9 @@ function App() {
     <div className="App">
       <Navbar />
       <Video />
-      <h1>Si no puedes adoptar, puedes ayudarnos de otra forma!</h1>
+      <h2>Si no puedes adoptar, puedes ayudarnos de otra forma!</h2>
       <CardBoton/>
-      <h1>Deja tu huella..</h1>
+      <h2>Deja tu huella..</h2>
       <Carrousel/>
       <Animal/>
       <Conocenos />
