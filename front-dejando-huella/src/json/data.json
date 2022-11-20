@@ -2,43 +2,44 @@
     {
         "id": "1",
             "imagen": "acogida1.png",
-            "enlace":"http://www.lostejos.com"
+            "enlace":"http://127.0.0.1:8000/acoge"
 
     },
     {
         "id": "2",
             "imagen": "huchas1.png",
-            "enlace":"http://www.google.com"         
+            "enlace":"http://127.0.0.1:8000/register"         
     },
 
     {
         "id": "3",
             "imagen": "eventos1.png",  
-            "enlace":"https://api-platform.com/"         
+            "enlace":"http://127.0.0.1:8000/register"         
     },
     {
         "id": "4",
             "imagen": "voluntario1.png", 
-            "enlace":"https://api-platform.com/"             
+            "enlace":"http://127.0.0.1:8000/register"             
     },
     {
         "id": "5",
             "imagen": "teamer1.png" ,
-            "enlace":"http://www.lostejos.com"     
+            "enlace":"http://127.0.0.1:8000/socio"     
     },
     {
         "id": "6",
             "imagen": "socios1.png",
-            "enlace":"http://www.google.com"              
+            "enlace":" http://127.0.0.1:8000/socio"   
+                  
     },
     {
         "id": "7",
             "imagen": "padrinos1.png" ,
-            "enlace":"https://api-platform.com/"      
+            "enlace":"http://127.0.0.1:8000/padrino"      
     },
     {
         "id": "8",
             "imagen": "dona1.png",
-            "enlace":"https://symfony.com/doc/current/index.html"        
+            "enlace":"http://127.0.0.1:8000/register"        
     }
 ]
