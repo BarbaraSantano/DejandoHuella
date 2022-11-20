@@ -20,8 +20,9 @@ function App() {
       <Carrousel/>
       <Animal/>
       <Conocenos />
-      <Footer /> 
       <Formulario />
+      <Footer /> 
+   
     </div>
   );
 }

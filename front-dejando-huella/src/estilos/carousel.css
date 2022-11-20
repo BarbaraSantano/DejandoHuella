@@ -17,7 +17,7 @@
     width:1000px;
     height: 600px;
     object-fit: cover;
-	  box-shadow: 0 0 4px magenta;
+	  box-shadow: 0 3px 13px 1px  #0be139;
     border-radius: 10px;
   }
   .sliderCont {
