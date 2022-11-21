@@ -12,7 +12,7 @@ export default function Users() {
         // ruta linux
         //url: "http://127.0.0.1:8000/api/animals",
         // ruta Windows
-          url: "http://localhost/DejandoHuella/DejandoHuella/public/index.php/api/animals",
+        url: "http://localhost/DejandoHuella/DejandoHuella/public/index.php/api/animals",
         method: "GET"
       });
     },
