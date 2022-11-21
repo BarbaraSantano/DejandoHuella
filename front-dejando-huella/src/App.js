@@ -8,6 +8,7 @@ import Animal from './componentes/Animal.jsx';
 import { Footer } from './componentes/Footer';
 import Conocenos from './componentes/Conocenos.jsx';
 import { Formulario } from './componentes/Formulario';
+import CookiesWeb from './componentes/CookiesWeb.jsx';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
       <Conocenos />
       <Formulario />
       <Footer /> 
+      <CookiesWeb />
    
     </div>
   );
