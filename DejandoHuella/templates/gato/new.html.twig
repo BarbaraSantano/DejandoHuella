@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Gato{% endblock %}
+
+{% block body %}
+
+    <h1 id="tituloCentrado">Crear nuevo registro</h1>
+    <div class="contenedor">
+
+    {{ include('gato/_form.html.twig') }}
+
+    <a id="botonCrear"  href="{{ path('app_gato_index') }}">Volver al listado</a>
+</div>
+{% endblock %}

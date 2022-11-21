@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Perro{% endblock %}
+
+{% block body %}
+    <h1 id="tituloCentrado">Editar: {{ perro.nombre }}</h1>  
+    <div class="contenedor">
+   
+    {{ include('perro/_form.html.twig', {'button_label': 'Guardar'}) }}
+
+    <a id="botonCrear" href="{{ path('app_perro_index') }}">Volver al listado</a>
+
+    {{ include('perro/_delete_form.html.twig') }}
+</div>
+{% endblock %}

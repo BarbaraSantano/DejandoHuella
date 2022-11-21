@@ -1,0 +1,63 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Perro{% endblock %}
+
+{% block body %}
+       <h1 id="tituloCentrado">{{ perro.nombre }}</h1>
+    <div class="contenedor">
+    <table class="table" id ="tableShow">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ perro.id }}</td>
+            </tr>
+            <tr>
+                <th>Nombre</th>
+                <td>{{ perro.nombre }}</td>
+            </tr>
+            <tr>
+                <th>Fecha de nacimiento</th>
+                <td>{{ perro.fechaNacimiento }}</td>
+            </tr>
+            <tr>
+                <th>Sexo</th>
+                <td>{{ perro.sexo }}</td>
+            </tr>
+            <tr>
+                <th>Raza</th>
+                <td>{{ perro.raza }}</td>
+            </tr>
+            <tr>
+                <th>Esterilizado</th>
+                <td>{{ perro.esterilizado ? 'Yes' : 'No' }}</td>
+            </tr>
+            <tr>
+                <th>Test</th>
+                <td>{{ perro.test ? 'Yes' : 'No' }}</td>
+            </tr>
+            <tr>
+                <th>Edad</th>
+                <td>{{ perro.edad }}</td>
+            </tr>
+            <tr>
+                <th>Tamaño</th>
+                <td>{{ perro.tamano }}</td>
+            </tr>
+            <tr>
+                <th>Descripción</th>
+                <td>{{ perro.descripcion }}</td>
+            </tr>
+            <tr>
+                <th>Imagen</th>
+                <td>{{ perro.imagen }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a id="botonCrear" href="{{ path('app_perro_index') }}">Volver al listado</a>
+
+    <a id="botonCrear" href="{{ path('app_perro_edit', {'id': perro.id}) }}">Editar</a>
+
+    {{ include('perro/_delete_form.html.twig') }}
+    </div>
+{% endblock %}

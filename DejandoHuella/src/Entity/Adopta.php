@@ -22,6 +22,12 @@ class Adopta
     #[ORM\ManyToOne(inversedBy: 'adopta')]
     private ?Animal $animal = null;
 
+    #[ORM\ManyToOne(inversedBy: 'adopta')]
+    private ?Gato $gato = null;
+
+    #[ORM\ManyToOne(inversedBy: 'adopta')]
+    private ?Perro $perro = null;
+
     #[ORM\Column(length: 255)]
     private ?string $nombre = null;
 
@@ -85,6 +91,30 @@ class Adopta
     public function setAnimal(?Animal $animal): self
     {
         $this->animal = $animal;
+
+        return $this;
+    }
+
+    public function getGato(): ?Gato
+    {
+        return $this->gato;
+    }
+
+    public function setGato(?Gato $gato): self
+    {
+        $this->gato = $gato;
+
+        return $this;
+    }
+
+    public function getPerro(): ?Perro
+    {
+        return $this->perro;
+    }
+
+    public function setPerro(?Perro $perro): self
+    {
+        $this->perro = $perro;
 
         return $this;
     }

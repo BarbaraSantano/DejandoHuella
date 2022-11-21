@@ -1,0 +1,53 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Gato index{% endblock %}
+
+{% block body %}
+    <h1 id="tituloCentrado">Registro de gatos</h1>
+
+    <table class="table" id ="tableShow">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nombre</th>
+                <th>Fecha de nacimiento</th>
+                <th>Sexo</th>
+                <th>Raza</th>
+                <th>Esterilizado</th>
+                <th>Test</th>
+                <th>Edad</th>
+                <th>Tamaño</th>
+                <th>Descripción</th>
+                <th>Imagen</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for gato in gatos %}
+            <tr>
+                <td>{{ gato.id }}</td>
+                <td>{{ gato.nombre }}</td>
+                <td>{{ gato.fechaNacimiento }}</td>
+                <td>{{ gato.sexo }}</td>
+                <td>{{ gato.raza }}</td>
+                <td>{{ gato.esterilizado ? 'Yes' : 'No' }}</td>
+                <td>{{ gato.test ? 'Yes' : 'No' }}</td>
+                <td>{{ gato.edad }}</td>
+                <td>{{ gato.tamano }}</td>
+                <td>{{ gato.descripcion }}</td>
+                <td>{{ gato.imagen }}</td>
+                <td>
+                    <a  id="botonCrud" href="{{ path('app_gato_show', {'id': gato.id}) }}">show</a>
+                    <a  id="botonCrud" href="{{ path('app_gato_edit', {'id': gato.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="12">No hay datos guardados</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a id="botonCrear" href="{{ path('app_gato_new') }}">Crear nuevo</a>
+{% endblock %}

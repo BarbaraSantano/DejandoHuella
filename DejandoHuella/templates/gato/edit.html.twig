@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Gato{% endblock %}
+
+{% block body %}
+    <h1 id="tituloCentrado">Editar: {{ gato.nombre }}
+    <div class="contenedor">
+        {{ include('gato/_form.html.twig', {'button_label': 'Guardar'}) }}
+
+        <a  id="botonCrear" href="{{ path('app_gato_index') }}">Volver al listado</a>
+
+        {{ include('gato/_delete_form.html.twig') }}
+    </div>
+{% endblock %}

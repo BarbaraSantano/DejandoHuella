@@ -1,0 +1,64 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Gato{% endblock %}
+
+{% block body %}
+    <h1 id="tituloCentrado">{{ gato.nombre }}</h1>
+
+    <div class="contenedor">
+    <table class="table" id ="tableShow">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ gato.id }}</td>
+            </tr>
+            <tr>
+                <th>Nombre</th>
+                <td>{{ gato.nombre }}</td>
+            </tr>
+            <tr>
+                <th>Fecha de nacimiento</th>
+                <td>{{ gato.fechaNacimiento }}</td>
+            </tr>
+            <tr>
+                <th>Sexo</th>
+                <td>{{ gato.sexo }}</td>
+            </tr>
+            <tr>
+                <th>Raza</th>
+                <td>{{ gato.raza }}</td>
+            </tr>
+            <tr>
+                <th>Esterilizado</th>
+                <td>{{ gato.esterilizado ? 'Yes' : 'No' }}</td>
+            </tr>
+            <tr>
+                <th>Test</th>
+                <td>{{ gato.test ? 'Yes' : 'No' }}</td>
+            </tr>
+            <tr>
+                <th>Edad</th>
+                <td>{{ gato.edad }}</td>
+            </tr>
+            <tr>
+                <th>Tamaño</th>
+                <td>{{ gato.tamano }}</td>
+            </tr>
+            <tr>
+                <th>Descripción</th>
+                <td>{{ gato.descripcion }}</td>
+            </tr>
+            <tr>
+                <th>Imagen</th>
+                <td>{{ gato.imagen }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a id="botonCrear" href="{{ path('app_gato_index') }}">Volver al listado</a>
+
+    <a id="botonCrear" href="{{ path('app_gato_edit', {'id': gato.id}) }}">Editar</a>
+
+    {{ include('gato/_delete_form.html.twig') }}
+    </div>
+{% endblock %}

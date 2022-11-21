@@ -2,15 +2,16 @@
 
 namespace App\Entity;
 
-use App\Repository\AnimalRepository;
+use App\Repository\GatoRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+use DateTime;
 use ApiPlatform\Metadata\ApiResource;
 
-#[ORM\Entity(repositoryClass: AnimalRepository::class)]
+#[ORM\Entity(repositoryClass: GatoRepository::class)]
 #[ApiResource]
-class Animal
+class Gato
 {
     #[ORM\Id]
     #[ORM\GeneratedValue]
@@ -20,14 +21,11 @@ class Animal
     #[ORM\Column(length: 255)]
     private ?string $nombre = null;
 
-    #[ORM\Column(length: 255)]
-    private ?string $fecha_nacimiento = null;
+    #[ORM\Column(type:"datetime", nullable: true)]
+    private ?\DateTime  $fechaNacimiento = null;
 
     #[ORM\Column(length: 255)]
     private ?string $sexo = null;
-
-    #[ORM\Column(length: 255)]
-    private ?string $especie = null;
 
     #[ORM\Column(length: 255)]
     private ?string $raza = null;
@@ -47,17 +45,17 @@ class Animal
     #[ORM\Column(length: 1500)]
     private ?string $descripcion = null;
 
-    #[ORM\OneToMany(mappedBy: 'animal', targetEntity: Acoge::class)]
-    private Collection $acoge;
-
-    #[ORM\OneToMany(mappedBy: 'animal', targetEntity: Adopta::class)]
-    private Collection $adopta;
-
-    #[ORM\ManyToMany(targetEntity: Padrino::class, inversedBy: 'animals')]
-    private Collection $padrino;
-
     #[ORM\Column(length: 255, nullable: true)]
     private ?string $imagen = null;
+
+    #[ORM\OneToMany(mappedBy: 'gato', targetEntity: Acoge::class)]
+    private Collection $acoge;
+
+    #[ORM\OneToMany(mappedBy: 'gato', targetEntity: Adopta::class)]
+    private Collection $adopta;
+
+    #[ORM\ManyToMany(targetEntity: Padrino::class, inversedBy: 'gatos')]
+    private Collection $padrino;
 
     public function __construct()
     {
@@ -71,7 +69,6 @@ class Animal
         return $this->id;
     }
 
- 
     public function getNombre(): ?string
     {
         return $this->nombre;
@@ -91,12 +88,12 @@ class Animal
 
     public function getFechaNacimiento(): ?string
     {
-        return $this->fecha_nacimiento;
+        return $this->fechaNacimiento;
     }
 
-    public function setFechaNacimiento(string $fecha_nacimiento): self
+    public function setFechaNacimiento(DateTime  $fechaNacimiento): self
     {
-        $this->fecha_nacimiento = $fecha_nacimiento;
+        $this->fechaNacimiento = $fechaNacimiento;
 
         return $this;
     }
@@ -109,18 +106,6 @@ class Animal
     public function setSexo(string $sexo): self
     {
         $this->sexo = $sexo;
-
-        return $this;
-    }
-
-    public function getEspecie(): ?string
-    {
-        return $this->especie;
-    }
-
-    public function setEspecie(string $especie): self
-    {
-        $this->especie = $especie;
 
         return $this;
     }
@@ -196,6 +181,7 @@ class Animal
 
         return $this;
     }
+
     public function getImagen(): ?string
     {
         return $this->imagen;
@@ -220,7 +206,7 @@ class Animal
     {
         if (!$this->acoge->contains($acoge)) {
             $this->acoge->add($acoge);
-            $acoge->setAnimal($this);
+            $acoge->setGato($this);
         }
 
         return $this;
@@ -230,8 +216,8 @@ class Animal
     {
         if ($this->acoge->removeElement($acoge)) {
             // set the owning side to null (unless already changed)
-            if ($acoge->getAnimal() === $this) {
-                $acoge->setAnimal(null);
+            if ($acoge->getGato() === $this) {
+                $acoge->setGato(null);
             }
         }
 
@@ -250,7 +236,7 @@ class Animal
     {
         if (!$this->adopta->contains($adoptum)) {
             $this->adopta->add($adoptum);
-            $adoptum->setAnimal($this);
+            $adoptum->setGato($this);
         }
 
         return $this;
@@ -260,8 +246,8 @@ class Animal
     {
         if ($this->adopta->removeElement($adoptum)) {
             // set the owning side to null (unless already changed)
-            if ($adoptum->getAnimal() === $this) {
-                $adoptum->setAnimal(null);
+            if ($adoptum->getGato() === $this) {
+                $adoptum->setGato(null);
             }
         }
 
@@ -280,7 +266,7 @@ class Animal
     {
         if (!$this->padrino->contains($padrino)) {
             $this->padrino->add($padrino);
-            $padrino->setAnimal($this);
+            $padrino->setGato($this);
         }
 
         return $this;
@@ -290,13 +276,13 @@ class Animal
     {
         if ($this->padrino->removeElement($padrino)) {
             // set the owning side to null (unless already changed)
-            if ($padrino->getAnimal() === $this) {
-                $padrino->setAnimal(null);
+            if ($padrino->getGato() === $this) {
+                $padrino->setGato(null);
             }
         }
 
         return $this;
     }
 
- 
+
 }

@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Perro{% endblock %}
+
+{% block body %}
+    <h1 id="tituloCentrado">Crear nuevo registro</h1>
+    <div class="contenedor">
+    {{ include('perro/_form.html.twig') }}
+
+    <a id="botonCrear" href="{{ path('app_perro_index') }}">Volver al listado</a>
+    </div>
+{% endblock %}

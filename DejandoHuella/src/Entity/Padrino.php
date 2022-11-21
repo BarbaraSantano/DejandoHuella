@@ -30,6 +30,12 @@ class Padrino
     #[ORM\ManyToMany(targetEntity: Animal::class, mappedBy: 'padrino')]
     private Collection $animals;
 
+    #[ORM\ManyToMany(targetEntity: Gato::class, mappedBy: 'padrino')]
+    private Collection $gatos;
+
+    #[ORM\ManyToMany(targetEntity: Perro::class, mappedBy: 'padrino')]
+    private Collection $perros;
+
     #[ORM\Column(length: 255)]
     private ?string $nombre = null;
 
@@ -64,6 +70,8 @@ class Padrino
     public function __construct()
     {
         $this->animals = new ArrayCollection();
+        $this->gatos = new ArrayCollection();
+        $this->perros = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -71,7 +79,8 @@ class Padrino
         return $this->id;
     }
 
-    public function __toString() {
+    public function __toString() 
+    {
         return $this->getNombre();
     }
 
@@ -133,7 +142,46 @@ class Padrino
         return $this;
     }
 
+    public function getGato(): ?Gato
+    {
+        return $this->gato;
+    }
+
+    public function setGato(?Gato $gato): self
+    {
+        $this->gato = $gato;
+
+        return $this;
+    }
+
+    public function getPerro(): ?Perro
+    {
+        return $this->perro;
+    }
+
+    public function setPerro(?Perro $perro): self
+    {
+        $this->perro = $perro;
+
+        return $this;
+    }
     /**
+     * @return Collection<int, Gato>
+     */
+    public function getGatos(): Collection
+    {
+        return $this->gatos;
+    }
+
+        /**
+     * @return Collection<int, Perro>
+     */
+    public function getPerros(): Collection
+    {
+        return $this->perros;
+    }
+
+        /**
      * @return Collection<int, Animal>
      */
     public function getAnimals(): Collection

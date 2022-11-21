@@ -3,7 +3,11 @@
 {% block title %}Hello LoginController!{% endblock %}
 
 {% block body %}
-<div class="contenedor">
+<div class="contenedor">        $this->addFlash('success', 'Your email address has been verified.');
+
+        return $this->redirectToRoute('app_register');
+    }
+}
 {% if error %}
         <div>{{ error.messageKey|trans(error.messageData, 'security') }}</div>
     {% endif %}

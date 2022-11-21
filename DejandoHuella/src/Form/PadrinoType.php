@@ -37,6 +37,8 @@ class PadrinoType extends AbstractType
             ->add('iban' )
             // ->add('usuario')
             ->add('animals', null,  ['label'=> 'Mascota',])
+            ->add('gatos', null,  ['label'=> 'Gatos',])
+            ->add('perros', null,  ['label'=> 'Perros',])
             ->add('agreeTerms', CheckboxType::class, [
                 'label' => "Acepto los términos y condiciones",
                 'mapped' => false,

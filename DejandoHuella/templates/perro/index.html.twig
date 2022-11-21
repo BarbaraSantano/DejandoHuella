@@ -1,0 +1,53 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Perro index{% endblock %}
+
+{% block body %}
+     <h1 id="tituloCentrado">Registro de perros</h1>
+
+    <table class="table" id ="tableShow">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nombre</th>
+                <th>Fecha de nacimiento</th>
+                <th>Sexo</th>
+                <th>Raza</th>
+                <th>Esterilizado</th>
+                <th>Test</th>
+                <th>Edad</th>
+                <th>Tamaño</th>
+                <th>Descripción</th>
+                <th>Imagen</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for perro in perros %}
+            <tr>
+                <td>{{ perro.id }}</td>
+                <td>{{ perro.nombre }}</td>
+                <td>{{ perro.fechaNacimiento }}</td>
+                <td>{{ perro.sexo }}</td>
+                <td>{{ perro.raza }}</td>
+                <td>{{ perro.esterilizado ? 'Yes' : 'No' }}</td>
+                <td>{{ perro.test ? 'Yes' : 'No' }}</td>
+                <td>{{ perro.edad }}</td>
+                <td>{{ perro.tamano }}</td>
+                <td>{{ perro.descripcion }}</td>
+                <td>{{ perro.imagen }}</td>
+                <td>
+                    <a id="botonCrud" href="{{ path('app_perro_show', {'id': perro.id}) }}">Mostrar</a>
+                    <a id="botonCrud" href="{{ path('app_perro_edit', {'id': perro.id}) }}">Editar</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="12">No hay datos que mostrar</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a id="botonCrear"  href="{{ path('app_perro_new') }}">Crear nuevo</a>
+{% endblock %}
