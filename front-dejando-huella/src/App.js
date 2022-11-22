@@ -12,6 +12,7 @@
 // import Empresas from './componentes/Empresas';
 import Inicio from "./routes/Inicio"
 import Contacto from "./routes/Contacto"
+import Conocenos from "./routes/Conocenos"
 import {Route,Routes} from 'react-router-dom';
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
     <Routes>
       <Route path="/" element={<Inicio/>}/>
       <Route path="/contacto" element={<Contacto/>}/>
+      <Route path="/conocenos" element={<Conocenos/>}/>
     </Routes>
     </>
     // <div className="App">
