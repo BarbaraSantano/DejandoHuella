@@ -32,7 +32,8 @@ class SocioController extends AbstractController
         if($form->isSubmitted() && $form->isValid()) {
             $this->em->persist($socio);
             $this->em->flush();
-            return $this->redirectToRoute('app_socio');
+            $this->addFlash('exito', 'Formulario enviado correctamente');
+            return $this->redirect('http://localhost:3000/');
         }
 
         return $this->render('socio/index.html.twig', [

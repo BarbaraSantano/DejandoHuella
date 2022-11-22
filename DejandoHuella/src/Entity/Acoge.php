@@ -36,14 +36,14 @@ class Acoge
     #[ORM\Column(length: 255)]
     private ?string $apellido = null;
 
-    #[ORM\Column(length: 255)]
+    #[ORM\Column(length: 9)]
     #[Assert\Length(
         min: 9,
         max: 9,
         minMessage: 'El número de teléfono debe contener {{ 9 }} carácteres',
         maxMessage: 'El número de teléfono debe contener {{ 9 }}carácteres',
     )]
-    private ?string $telefono = null;
+    private ?int $telefono = null;
 
     #[ORM\Column(length: 255)]
     private ?string $direccion = null;
@@ -166,12 +166,12 @@ class Acoge
         return $this;
     }
 
-    public function getTelefono(): ?string
+    public function getTelefono(): ?int
     {
         return $this->telefono;
     }
 
-    public function setTelefono(string $telefono): self
+    public function setTelefono(int $telefono): self
     {
         $this->telefono = $telefono;
 

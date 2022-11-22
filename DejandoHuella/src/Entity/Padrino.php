@@ -46,14 +46,14 @@ class Padrino
     #[Assert\Email()]
     private ?string $email = null;
 
-    #[ORM\Column(length: 255)]
+    #[ORM\Column(length: 9)]
     #[Assert\Length(
         min: 9,
         max: 9,
         minMessage: 'Your first name must be at least {{ limit }} characters long',
         maxMessage: 'Your first name cannot be longer than {{ limit }} characters',
     )]
-    private ?string $telefono = null;
+    private ?int $telefono = null;
 
     #[ORM\Column(length: 255)]
     private ?string $direccion = null;
@@ -244,12 +244,12 @@ class Padrino
         return $this;
     }
 
-    public function getTelefono(): ?string
+    public function getTelefono(): ?int
     {
         return $this->telefono;
     }
 
-    public function setTelefono(string $telefono): self
+    public function setTelefono(int $telefono): self
     {
         $this->telefono = $telefono;
 

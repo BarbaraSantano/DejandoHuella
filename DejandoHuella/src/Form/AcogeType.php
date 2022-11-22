@@ -57,7 +57,7 @@ class AcogeType extends AbstractType
                     'Macho' => 'macho',
                 ],
             ] )
-            ->add('animal', null,  ['label'=> 'Si quieres acoger a una de nuestras mascotas en especial, elige su nombre en la lista',])
+            // ->add('animal', null,  ['label'=> 'Si quieres acoger a una de nuestras mascotas en especial, elige su nombre en la lista',])
             ->add('gato', null,  ['label'=> 'Si quieres acoger a uno de nuestros gatos en especial, elige su nombre en la lista',])
             ->add('perro', null,  ['label'=> 'Si quieres acoger a una de nuestros perros en especial, elige su nombre en la lista',])
             ->add('agreeTerms', CheckboxType::class, [

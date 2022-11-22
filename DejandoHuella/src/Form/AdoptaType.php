@@ -25,7 +25,7 @@ class AdoptaType extends AbstractType
             ->add('direccion' ,null,  ['label'=> 'Dirección'])
             ->add('fechaNacimiento', BirthdayType::class , ['label'=> 'Fecha de nacimiento'])
             // ->add('usuario')
-            ->add('animal',null, ['label'=> 'Mascota'])
+            // ->add('animal',null, ['label'=> 'Mascota'])
             ->add('gato',null, ['label'=> 'Gato'])
             ->add('perro',null, ['label'=> 'Perro'])
             ->add('agreeTerms', CheckboxType::class, [
