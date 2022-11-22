@@ -14,7 +14,7 @@ form{
    justify-content: center !important;
 }
 
-#containergral{
+.containergral{
     background-image: linear-gradient(to bottom, #32e891 , #6469ED ) !important;    width: 800px;
     margin: auto;
     background-color: white;
@@ -23,7 +23,7 @@ form{
     border-radius: 20px;
 }
 
-#botonformu{
+.botonformu{
     background: #32e891;
     width: 150px;
     height: 40px;
@@ -62,19 +62,19 @@ input{
     font-weight:900;
 }
 
-#mensaje{
+.mensaje{
     width: 80%;
     height: 200px;
 }
 
-#containerfotos{
+.containerfotos{
     display: flex;
     justify-content: space-around;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 0;
 }
 
-#containerfotos img{
+.containerfotos img{
     display: inline-grid;
     height: 300px;
     width: fit-content;
