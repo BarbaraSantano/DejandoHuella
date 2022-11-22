@@ -21,11 +21,11 @@ class UsuarioType extends AbstractType
             ->add('direccion')
             ->add('fecha_nacimiento')
             ->add('iban')
-            ->add('isVerified')
-            ->add('acoge')
-            ->add('adopta')
-            ->add('padrino')
-            ->add('socio')
+            // ->add('isVerified')
+            // ->add('acoge')
+            // ->add('adopta')
+            // ->add('padrino')
+            // ->add('socio')
         ;
     }
 

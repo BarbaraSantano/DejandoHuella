@@ -45,10 +45,12 @@ security:
     # Easy way to control access for large sections of your site
     # Note: Only the *first* access control that matches will be used
     access_control:
-         - { path: ^/admin, roles: ROLE_ADMIN }
-         - { path: ^/super-admin, roles: ROLE_SUPER_ADMIN }
-         - { path: ^/superuser, roles: ROLE_SUPERUSER }
-         - { path: ^/profile, roles: ROLE_USER }
+            - { path: ^/admin, roles: ROLE_ADMIN }
+            - { path: ^/gato, roles: ROLE_ADMIN }
+            - { path: ^/perro, roles: ROLE_ADMIN }
+            - { path: ^/super-admin, roles: ROLE_SUPER_ADMIN }
+            - { path: ^/superuser, roles: ROLE_SUPERUSER }
+            - { path: ^/profile, roles: ROLE_USER }
 
 when@test:
     security:
