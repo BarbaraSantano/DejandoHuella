@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2? family= Amatic+SC:wght@400;700 & display=swap');
+@import url('https://fonts.googleapis.com/css2? family= Dancing+Script:wght@500 & display=swap');
+.ultimosmiembros{
+    display: flex;
+    flex-direction: row;
+	flex-wrap: wrap;
+	justify-content:space-around;
+    margin: 10px;
+
+}
+.titulo{
+    display:flex;
+    flex-direction: row;
+	flex-wrap: wrap;
+	justify-content:center;
+    font-size: 40px;
+    box-shadow: 0 3px 13px 1px rgba(0 0 0 /9%);
+    margin: 10px;
+}
+.imagenUltimosMiembros{
+    height: 100%;
+    width: 400px;
+    border-radius: 100%;
+    border:3px solid rgb(110, 110, 250);
+   
+}
+h2{
+    font-family: 'Amatic SC', cursive; 
+}
+p{
+    font-family: 'Amatic SC', cursive; 
+}
