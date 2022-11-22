@@ -5,6 +5,7 @@ import perro2 from '../media/gatoyperroformu.jpg';
 import perro3 from '../media/gatoformu1.jpg';
 import emailjs from 'emailjs-com';
 
+
 export const Formulario = () => {
     function enviarEmail(e){
         e.preventDefault();
@@ -37,3 +38,4 @@ export const Formulario = () => {
         </form>
     </div>
   )}
+  export default Formulario

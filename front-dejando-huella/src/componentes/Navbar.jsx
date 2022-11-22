@@ -3,6 +3,7 @@ import { FaBars, FaTimes } from 'react-icons/fa';
 import logo from '../media/logo-horizontal.png';
 import '../estilos/Navbar.css';
 import Boton from './Boton';
+import {Link} from 'react-router-dom'
 
 const Navbar = () => {
 
@@ -38,11 +39,13 @@ const Navbar = () => {
 
                 </div>
                 <ul className={click ? "nav-menu active" : "nav-menu"}>
-                <li className='nav-item'>
-                      <a href='Inicio' onClick={closeMenu}>INICIO</a>
+                    <li className='nav-item'>
+                        <Link to="/">INICIO</Link>
+                      {/* <a href='Inicio' onClick={closeMenu}>INICIO</a> */}
                     </li>
                     <li className='nav-item'>
-                      <a href='adoptaPerro' onClick={closeMenu}>PERROS</a>
+                    <Link to="/">PERROS</Link>
+                      {/* <a href='adoptaPerro' onClick={closeMenu}>PERROS</a> */}
                     </li>
 
                     <li className='nav-item'>
@@ -53,7 +56,8 @@ const Navbar = () => {
                         <a href='#acercaDe' onClick={closeMenu}>NOSOTROS</a>
                     </li>
                     <li className='nav-item'>
-                        <a href='#contactanos' onClick={closeMenu}>CONTACTO</a>
+                    <Link to="/contacto">CONTACTO</Link>
+                        {/* <a href='#contactanos' onClick={closeMenu}>CONTACTO</a> */}
                     </li>
                     <li className='nav-item'>
                         <div className="contenedor-boton">
