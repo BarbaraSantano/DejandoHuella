@@ -1,0 +1,50 @@
+.containerEmpresa{
+
+width: 95%;   
+margin: auto;
+
+}
+
+
+.imagenes{
+display: flex;
+justify-content: space-around;
+flex-wrap: wrap;
+
+}
+
+.imagenes img{
+    width: 150px;
+    height: 150px;
+}
+
+.containerEmpresa h2{
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 30px;
+}
+
+@media screen and (max-width: 700px){
+   .containerEmpresa{
+    width: 90%;
+   }
+   
+   .containerEmpresa img{
+        width: 48%;
+    }
+    
+}
+
+@media screen and (max-width: 450px){
+    h2{
+        font-size: 22px;
+    }
+    .containerEmpresa{
+     width: 98%;
+    }
+    
+    .containerEmpresa img{
+         width: 80%;
+     }
+     
+ }

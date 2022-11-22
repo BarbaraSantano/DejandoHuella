@@ -13,6 +13,7 @@ footer{
     display: flex;
     justify-content: space-around;
     margin-top: 50px;
+    margin-bottom: -10px;
       
 }
 
@@ -33,4 +34,5 @@ footer{
 
    .copyright{
     text-align: center;
+    font-family: 'Amatic SC', cursiva;
    }

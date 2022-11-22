@@ -9,6 +9,7 @@ import { Footer } from './componentes/Footer';
 import Conocenos from './componentes/Conocenos.jsx';
 import { Formulario } from './componentes/Formulario';
 import CookiesWeb from './componentes/CookiesWeb.jsx';
+import Empresas from './componentes/Empresas';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
       <Carrousel/>
       <Animal/>
       <Conocenos />
+      <Empresas />
       <Formulario />
       <Footer /> 
       <CookiesWeb />
