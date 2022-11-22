@@ -1,31 +1,27 @@
 import React from 'react'
 import '../estilos/formulario.css';
-// import perro1 from '../../media/perroformu1.jpg';
-// import perro2 from '../media/gatoyperroformu.jpg';
-// import perro3 from '../media/gatoformu1.jpg';
-// import logo from  '../media/logo_footer.png';
+import perro1 from '../media/perroformu1.jpg';
+import perro2 from '../media/gatoyperroformu.jpg';
+import perro3 from '../media/gatoformu1.jpg';
 
 export const Formulario = () => {
   return (
     <div id="containergral">
-    {/* <div id="containerfotos">
+    <div id="containerfotos">
         <img src={perro1} alt="" />
-        <img src={perro1} alt="" />
-        <img src={perro1} alt="" />
-    </div> */}
+        <img src={perro3} alt="" />
+        <img src={perro2} alt="" />
+    </div>
     <h1 id="titulocentrado">Contacta con nosotrxs: </h1>
         <form>
             <div id="formunombre">
-                <label htmlFor="">Nombre </label>
-                <input type="text"/>
+                <input type="text" placeholder="Nombre" id="nombre"/>
             </div>
             <div id="formuemail">
-                <label htmlFor="">Email </label>
-                <input type="text"/>
+                <input type="text" placeholder="Email" id="email"/>
             </div>
             <div id="formumensaje">
-                <label htmlFor="">Mensaje </label>
-                <input id="areatexto" type="textarea"/>
+                <input type="textarea" placeholder="Mensaje" id="mensaje"/>
             </div>
             <div>
                 <button type="submit" id="botonformu">Enviar</button>

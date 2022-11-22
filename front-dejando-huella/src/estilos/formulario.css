@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2? family= Amatic+SC:wght@400;700 & display=swap');
+
+body{
+    font-family: 'Amatic SC', cursiva;
+}
+
 form{
     background-repeat: no-repeat;
     font-family: signikaregular;
@@ -31,6 +37,8 @@ form{
     justify-content: center;
     margin: 0 auto;
     margin-top: 5px;
+    font-family: 'Amatic SC', cursiva;
+    font-size: 170%;
 }
 
 
@@ -39,16 +47,39 @@ h1{
     text-align: center;
     font-family: signikabold;
     color: #464d78;
+    font-family: 'Amatic SC', cursiva;
+    font-size: 400%;
 }
 
-label{
-    color: white;
-}
 
 input{
-    border-radius: 20px;
+    border-radius: 10px;
+    margin: 10px;
+    width: 80%;
+    height: 30px;
+    font-family: 'Amatic SC', cursiva;
+    font-size: 170%;
+    font-weight:900;
 }
 
-#areatexto{
-    width: 150px;
+#mensaje{
+    width: 80%;
+    height: 200px;
+}
+
+#containerfotos{
+    display: flex;
+    justify-content: space-around;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 0;
+}
+
+#containerfotos img{
+    display: inline-grid;
+    height: 300px;
+    width: fit-content;
+    gap: 0;
+    justify-content: space-around;
+    border-radius: 10px;
+    margin-top: 5px;
 }
