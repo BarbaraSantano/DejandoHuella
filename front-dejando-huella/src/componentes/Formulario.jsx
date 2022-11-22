@@ -23,13 +23,13 @@ export const Formulario = () => {
     <h1 className="titulocentrado">Contacta con nosotrxs: </h1>
         <form onSubmit={enviarEmail}>
             <div className="formunombre">
-                <input type="text" placeholder="Nombre" id="nombre"/>
+                <input type="text" placeholder="Nombre" id="nombre" name="nombre"/>
             </div>
             <div className="formuemail">
-                <input type="email" placeholder="Email" id="email"/>
+                <input type="email" placeholder="Email" id="email" name="email"/>
             </div>
             <div className="formumensaje">
-                <input type="text" placeholder="Mensaje" id="mensaje"/>
+                <input type="text" placeholder="Mensaje" id="mensaje"name="mensaje"/>
             </div>
             <div>
                 <button type="submit" className="botonformu">Enviar</button>
