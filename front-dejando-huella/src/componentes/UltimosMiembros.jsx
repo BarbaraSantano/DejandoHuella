@@ -6,7 +6,7 @@ function UltimosMiembros (){
       <div className='ultimosmiembros'>
         <div className='titulo'>  <h2>ULTIMOS MIEMBROS DE LA MANADA</h2>
         <br></br>
-        <p>En la última década han recogido 15.635 perros y gatos abandonados en Albacete. Manteniendo la media anual, en el año 2021 se hicieron cargo de 1.525 animales entre perros y gatos. A todos se les ha aplicado desde hace muchos años el criterio ético de sacrifico cero real
+        <p>258 300 animales fueron abandonados en 2020.Más de 700 animales que terminan en las calles o perreras de nuestro país cada día, según los datos del estudio de abandono y adopción 2021.
 </p>
         </div>
 
