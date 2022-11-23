@@ -8,11 +8,13 @@
     padding: 20px;
     background-color:white;
     box-shadow: 0 3px 13px 1px rgba(0 0 0 /9%);
+    margin-top: 150px;
+    
 }
 
 .imagen-testimonio {
-    height: 100%;
-    width: 500px;
+    height: 50%;
+    width: 700px;
 }
 
 .contenedor-texto-testimonio {
@@ -26,22 +28,26 @@
 }
 
 .titulo-testimonio {
-    font-size: 2.5rem;
+    font-size: 2.9rem;
     text-align: center;
 }
 
 .subtitulo-testimonio {
-    font-size: 1.9rem;
+    font-size: 2.4rem;
     margin-top: 15px;
     padding: 30px;
     text-align: center;
 }
 
 .texto-testimonio {
-    font-size:1.1rem;
+    font-size: 1.9rem;
     text-align: justify;
+    line-height: normal;
+
    
 }
+
+
 @media all and (max-width: 600px) {
     .contenedor-testimonio{
         width:auto;

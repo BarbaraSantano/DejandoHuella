@@ -1,5 +1,6 @@
 import React from 'react';
 import '../estilos/Testimonio.css';
+import Boton from './Boton';
 
 class Testimonio extends React.Component {
   render() {
@@ -17,6 +18,7 @@ class Testimonio extends React.Component {
             {this.props.subtitulo} 
           </p>
           <p className='texto-testimonio'>"{this.props.testimonio}"</p>
+          <Boton texto='saber más'/>
         </div>
       </div>
     );
