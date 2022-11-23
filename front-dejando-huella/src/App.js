@@ -13,6 +13,8 @@
 import Inicio from "./routes/Inicio"
 import Contacto from "./routes/Contacto"
 import Conocenos from "./routes/Conocenos"
+import Perro from "./routes/Perro"
+import Gato from "./routes/Gato"
 import {Route,Routes} from 'react-router-dom';
 function App() {
   return (
@@ -20,8 +22,11 @@ function App() {
     <>
     <Routes>
       <Route path="/" element={<Inicio/>}/>
+      <Route path="/perro" element={<Perro/>}/>
+      <Route path="/gato" element={<Gato/>}/>
       <Route path="/contacto" element={<Contacto/>}/>
       <Route path="/conocenos" element={<Conocenos/>}/>
+     
     </Routes>
     </>
     // <div className="App">
