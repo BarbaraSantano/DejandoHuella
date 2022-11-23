@@ -7,9 +7,9 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
 
-class AdminController extends AbstractController
+class HomeController extends AbstractController
 {
-    #[Route('/admin', name: 'app_admin')]
+    #[Route('/', name: 'app_home')]
     public function index(AuthenticationUtils $authenticationUtils): Response
     {
         $error = $authenticationUtils->getLastAuthenticationError();

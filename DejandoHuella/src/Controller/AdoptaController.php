@@ -33,7 +33,7 @@ class AdoptaController extends AbstractController
             $this->em->persist($adopta);
             $this->em->flush();
             $this->addFlash('exito', 'Formulario enviado correctamente');
-            return $this->redirect('http://localhost:3000/');
+            return $this->redirectToRoute('app_adopta');
         }
 
         return $this->render('adopta/index.html.twig', [

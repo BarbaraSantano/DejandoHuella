@@ -1,5 +1,21 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>Ocurrió un error inesperado</h1>
+<div class="contenedor">   
+    <h1 id="tituloCentrado">Acceso denegado</h1>
+
+    {# <p> La página a la que intentas acceder no está disponible. Por favor, vuelve a iniciar sesión. </p> #}
+
+    {# ejemplo de parte de la página que sólo se muestra a usuario identificado #}
+    {# {% if is_granted('IS_AUTHENTICATED_FULLY') %} #}
+        {# ... #}
+    {# {% endif %} #} 
+
+    <p id="tituloCentrado">
+        No se puede acceder a la página solicitada. Comprueba cualquier error
+        escribiendo la URL o: 
+            <a id="botonCrear"  href="{{'/login'}}">Vuelve a iniciar sesión</a>
+            <a id="botonCrear"  href="{{'http://localhost:3000/' }}">Vuelve al inicio</a>
+    </p>
+</div>
 {% endblock %}

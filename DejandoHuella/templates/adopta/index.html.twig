@@ -8,16 +8,17 @@
         <div class="row h-100 justify-content-center align-items-center">
             <div class="col-6 shadow bg-white rounded my-3 p-5">
                 <h1 id="prueba">Formulario de Adopción</h1>
+                
+                {% for message in app.flashes('exito') %}
+                    <div class="alert alert-success">
+                        {{ message }}
+                    </div>
+                {% endfor %}
 
-                 {% for message in app.flashes('exito') %}
-                        <div class="alert alert-success">
-                            {{ message }}
-                        </div>
-                    {% endfor %}
+                {{form(form_adopta)}}
 
-                  {{form(form_adopta)}}
 
-                  <a id="botonCrear"  href="{{'http://localhost:3000/' }}">Volver</a>
+                <a id="botonCrear"  href="{{'http://localhost:3000/' }}">Volver</a>
 
 
             </div>

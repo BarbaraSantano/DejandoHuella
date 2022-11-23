@@ -33,7 +33,7 @@ class PadrinoController extends AbstractController
             $this->em->persist($padrino);
             $this->em->flush();
             $this->addFlash('exito', 'Formulario enviado correctamente');
-           return $this->redirect('http://localhost:3000/');
+           return $this->redirectToRoute('app_padrino');
         }
 
         return $this->render('padrino/index.html.twig', [

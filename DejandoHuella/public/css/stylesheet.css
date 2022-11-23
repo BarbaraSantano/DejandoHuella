@@ -29,7 +29,7 @@ body {
     /* height: 500px; */
      background-image: linear-gradient(to top, #32e891 , white ) !important;
      background-repeat: no-repeat;
-     font-family: signikaregular;
+     font-family: 'signikaregular'!important;
     -moz-background-repeat: no-repeat;
     -webkit-background-repeat: no-repeat;
     -o-background-repeat: no-repeat;
@@ -42,9 +42,9 @@ body {
 
 h1
 {
-    font-family: signikabold;
+    font-family: 'signikabold';
     color: #464d78;
-
+    text-align: center;
     
 }
 
@@ -60,6 +60,7 @@ h1
     margin-top: 10px;
     margin-bottom: 50px;
     text-align:center;
+    font-family: 'signikaregular'!important;
    
 }
 
@@ -74,6 +75,7 @@ h1
        margin-bottom: 50px;
        margin-top: 50px;
        background-color: white;
+       font-family: 'signikaregular'!important;
       
        
    
@@ -85,6 +87,7 @@ h1
     border-collapse: collapse;
     text-align: left;
     width: 50%;
+    font-family: 'signikaregular'!important;
 
 }
 
@@ -97,6 +100,7 @@ thead{
 }
 th, td{
     text-align: center;
+    font-family: 'signikaregular'!important;
 }
 
 #botonCrud{
@@ -107,6 +111,7 @@ th, td{
     box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
     text-decoration: none;
     border-radius: 10px;
+    font-family: 'signikaregular'!important;
 
 
 }
@@ -125,6 +130,8 @@ th, td{
     justify-content: center;
     margin: 0 auto;
     margin-top: 5px;
+    text-align: center;
+    font-family: 'signikaregular'!important;
 
 }
 
@@ -132,9 +139,9 @@ th, td{
 #tituloCentrado{
     margin-top: 30px;
     text-align: center;
+    margin-bottom: 30px;
+    font-family: 'signikabold'!important;
 }
-
-
 
 
 .contenedor{
@@ -144,7 +151,7 @@ th, td{
     padding: 10px 20px;
     box-sizing: border-box;
     border-radius: 20px;
-   
+    font-family: 'signikaregular'!important;
 }
 
 #etiquetacentrada{
@@ -152,4 +159,5 @@ th, td{
     display: flex;
     align-items: center;
     justify-content: center !important;
+    font-family: 'signikaregular'!important;
 }

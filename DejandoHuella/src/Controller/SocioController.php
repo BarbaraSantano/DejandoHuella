@@ -33,7 +33,7 @@ class SocioController extends AbstractController
             $this->em->persist($socio);
             $this->em->flush();
             $this->addFlash('exito', 'Formulario enviado correctamente');
-            return $this->redirect('http://localhost:3000/');
+            return $this->redirectToRoute('app_socio');
         }
 
         return $this->render('socio/index.html.twig', [

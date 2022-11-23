@@ -8,19 +8,16 @@
             <div class="col-6 shadow bg-white rounded my-3 p-5">
                 <h1 id="prueba">Formulario de Apadrinamiento</h1>
 
-                 {% for message in app.flashes('exito') %}
-                        <div class="alert alert-success">
-                            {{ message }}
-                        </div>
-                    {% endfor %}
+                {% for message in app.flashes('exito') %}
+                    <div class="alert alert-success">
+                        {{ message }}
+                    </div>
+                {% endfor %}
 
-                  {{form(form_padrino)}}
+                {{form(form_padrino)}}
 
-                 <a id="botonCrear"  href="{{'http://localhost:3000/' }}">Volver</a>
-
-
+                <a id="botonCrear"  href="{{'http://localhost:3000/' }}">Volver</a>
             </div>
         </div>
-
 
 {% endblock %}

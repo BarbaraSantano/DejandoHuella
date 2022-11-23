@@ -34,7 +34,7 @@ class AcogeController extends AbstractController
             $this->em->persist($acoge);
             $this->em->flush();
             $this->addFlash('exito', 'Formulario enviado correctamente');
-            return $this->redirect('http://localhost:3000/');
+            return $this->redirectToRoute('app_acoge');
         }
 
         return $this->render('acoge/index.html.twig', [

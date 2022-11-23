@@ -6,5 +6,7 @@
 
 <h1 id="tituloCentrado">Mi perfil </h1>
 <p id="tituloCentrado">{{ app.user.email}}</p>
+<a id="botonCrear"  href="{{'/gato'}}">Registro de gatos</a>
+<a id="botonCrear"  href="{{'/perro' }}">Registro de perros</a>
 <p><a  id="botonCrear" href="{{ path('app_logout')}}"> Cerrar sesión</a></p>
 {% endblock %}
