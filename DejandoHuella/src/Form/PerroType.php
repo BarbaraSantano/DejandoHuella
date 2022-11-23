@@ -15,7 +15,7 @@ class PerroType extends AbstractType
     {
         $builder
             ->add('nombre')
-            ->add('fechaNacimiento', BirthdayType::class , ['label'=> 'Fecha de nacimiento'] )
+            ->add('fechaNacimiento', null, ['label'=> 'Fecha de nacimiento (YYYY-MM-DD)'] )
             ->add('sexo', ChoiceType::class, [
                 'choices'  => [
                     'Hembra' => 'Hembra',

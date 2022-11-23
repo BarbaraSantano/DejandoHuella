@@ -5,7 +5,6 @@ namespace App\Form;
 use App\Entity\Gato;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
-use Symfony\Component\Form\Extension\Core\Type\BirthdayType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
@@ -15,7 +14,7 @@ class GatoType extends AbstractType
     {
         $builder
             ->add('nombre')
-            ->add('fechaNacimiento', BirthdayType::class , ['label'=> 'Fecha de nacimiento'] )
+            ->add('fechaNacimiento', null, ['label'=> 'Fecha de nacimiento (YYYY-MM-DD)'] )
             ->add('sexo', ChoiceType::class, [
                 'choices'  => [
                     'Hembra' => 'Hembra',

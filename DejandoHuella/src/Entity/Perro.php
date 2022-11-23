@@ -6,7 +6,6 @@ use App\Repository\PerroRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
-use DateTime;
 use ApiPlatform\Metadata\ApiResource;
 
 #[ORM\Entity(repositoryClass: PerroRepository::class)]
@@ -21,8 +20,8 @@ class Perro
     #[ORM\Column(length: 255)]
     private ?string $nombre = null;
 
-    #[ORM\Column(type:"datetime", nullable: true)]
-    private ?\DateTime  $fechaNacimiento = null;
+    #[ORM\Column(length: 255)]
+    private ?string $fecha_nacimiento = null;
 
     #[ORM\Column(length: 255)]
     private ?string $sexo = null;
@@ -88,12 +87,12 @@ class Perro
 
     public function getFechaNacimiento(): ?string
     {
-        return $this->fechaNacimiento;
+        return $this->fecha_nacimiento;
     }
 
-    public function setFechaNacimiento(DateTime  $fechaNacimiento): self
+    public function setFechaNacimiento(string $fecha_nacimiento): self
     {
-        $this->fechaNacimiento = $fechaNacimiento;
+        $this->fecha_nacimiento = $fecha_nacimiento;
 
         return $this;
     }
