@@ -12,6 +12,7 @@
 // import Empresas from './componentes/Empresas';
 import Inicio from "./routes/Inicio"
 import Contacto from "./routes/Contacto"
+import Colabora from "./routes/Colabora"
 import Conocenos from "./routes/Conocenos"
 import Perro from "./routes/Perro"
 import Gato from "./routes/Gato"
@@ -26,6 +27,8 @@ function App() {
       <Route path="/gato" element={<Gato/>}/>
       <Route path="/contacto" element={<Contacto/>}/>
       <Route path="/conocenos" element={<Conocenos/>}/>
+      <Route path="/colabora" element={<Colabora/>}/>
+    
      
     </Routes>
     </>

@@ -63,8 +63,10 @@ const Navbar = () => {
                     </li>
                     <li className='nav-item'>
                         <div className="contenedor-boton">
-                        <Boton
+                        <Link to="/colabora"> <Boton
                          texto='Colabora' />
+                        </Link>
+                       
                         </div>
                         
                     </li>

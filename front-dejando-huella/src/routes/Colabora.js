@@ -1,21 +1,16 @@
 import React from "react";
 import Navbar from '../componentes/Navbar'
-import Video from '../componentes/Video'
 import CardBoton from '../componentes/CardBoton'
-
 import Footer from '../componentes/Footer'
-import UltimosMiembros from '../componentes/UltimosMiembros'
 
-const Inicio=()=>{
+
+const colabora=()=>{
     return(
         <div>
             <Navbar/>
-            <Video/>
-            <CardBoton/>
-            
-            <UltimosMiembros/>
+            { <CardBoton/> }
             <Footer/>
         </div>
     )
 }
-export default Inicio
+export default colabora

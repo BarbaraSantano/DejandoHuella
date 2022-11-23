@@ -21,7 +21,7 @@ export const Formulario = () => {
         <img src={perro3} alt="" />
         <img src={perro2} alt="" />
     </div>
-    <h1 className="titulocentrado">Contacta con nosotrxs: </h1>
+    <h2 className="titulocentrado">Contacta con nosotrxs: </h2>
         <form onSubmit={enviarEmail}>
             <div className="formunombre">
                 <input type="text" placeholder="Nombre" id="nombre" name="nombre"/>

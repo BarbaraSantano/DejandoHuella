@@ -18,7 +18,10 @@ class Testimonio extends React.Component {
             {this.props.subtitulo} 
           </p>
           <p className='texto-testimonio'>"{this.props.testimonio}"</p>
-          <Boton texto='saber más'/>
+          <div className="contenedor-boton">
+                        <Boton
+                         texto='Saber más' />
+                        </div>
         </div>
       </div>
     );
