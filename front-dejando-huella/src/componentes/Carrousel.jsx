@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import "../estilos/carousel.css";
 import "../estilos/boton.css";
 import 'react-gallery-carousel/dist/index.css';
+import {Link} from 'react-router-dom'
 
 export const Carrousel = () => {
   const [current, setCurrent] = useState(0);
@@ -81,8 +82,8 @@ export const Carrousel = () => {
         
           </div>
         ) : null}
+ <Link to="/animal"><button className="btncarrousel " onClick="" >Ver todos </button></Link>
 
-<button className="btncarrousel " onClick="" >Ver todos </button>
 
     </div>
       

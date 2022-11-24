@@ -1,4 +1,5 @@
 import React from 'react'
+import "../estilos/blog.css";
 
 function Blog() {
   return (

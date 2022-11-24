@@ -16,8 +16,8 @@ import Colabora from "./routes/Colabora"
 import Conocenos from "./routes/Conocenos"
 import Perro from "./routes/Perro"
 import Gato from "./routes/Gato"
+import Animal from "./routes/Animal"
 import {Route,Routes} from 'react-router-dom';
-import Boton from "./componentes/Boton"
 import Tarjetagatos from "./routes/Tarjetagato"
 import Tarjetaperros from "./routes/Tarjetaperro"
 function App() {
@@ -32,7 +32,8 @@ function App() {
       <Route path="/conocenos" element={<Conocenos/>}/>
       <Route path="/colabora" element={<Colabora/>}/>
       <Route path="/tarjetagato" element={<Tarjetagatos/>}/>
-      <Route path="/tarjetaperro" element={<Tarjetaperros/>}/>    
+      <Route path="/tarjetaperro" element={<Tarjetaperros/>}/> 
+      <Route path="/animal" element={<Animal/>}/>   
     </Routes>
     </>
     // <div className="App">

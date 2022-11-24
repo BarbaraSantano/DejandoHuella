@@ -11,9 +11,9 @@ export default function Users() {
     function () {
       fetchProyecto({
         // ruta linux
-        url: "http://127.0.0.1:8000/api/perros",
+        //url: "http://127.0.0.1:8000/api/perros",
         // ruta Windows
-        // url: "http://localhost/DejandoHuella/DejandoHuella/public/index.php/api/perros",
+         url: "http://localhost/DejandoHuella/DejandoHuella/public/index.php/api/perros",
         method: "GET"
       });
     },
