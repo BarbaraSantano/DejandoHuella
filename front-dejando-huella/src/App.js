@@ -18,6 +18,8 @@ import Perro from "./routes/Perro"
 import Gato from "./routes/Gato"
 import {Route,Routes} from 'react-router-dom';
 import Boton from "./componentes/Boton"
+import Tarjetagatos from "./routes/Tarjetagato"
+import Tarjetaperros from "./routes/Tarjetaperro"
 function App() {
   return (
 
@@ -29,9 +31,8 @@ function App() {
       <Route path="/contacto" element={<Contacto/>}/>
       <Route path="/conocenos" element={<Conocenos/>}/>
       <Route path="/colabora" element={<Colabora/>}/>
-
-    
-     
+      <Route path="/tarjetagato" element={<Tarjetagatos/>}/>
+      <Route path="/tarjetaperro" element={<Tarjetaperros/>}/>    
     </Routes>
     </>
     // <div className="App">

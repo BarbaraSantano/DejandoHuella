@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import useFetch from "../hooks/useFetch";
 import '../estilos/animal.css';
+import {Link} from 'react-router-dom';
 
 
 export default function Users() {
@@ -36,13 +37,10 @@ export default function Users() {
 			{
 				 state.data.map(card=>{
 					return(
-                        
-						
 								<div className='content' key={card.id}>
-                     <h1>{card.nombre}</h1> 
-                      <img src={(`../media/${card.imagen} `)}className='frontal' alt=""/>
-                     </div>
-                        				
+                    <h1>{card.nombre}</h1> 
+                    <Link to="/tarjetagato"><img src={(`../media/${card.imagen} `)}className='frontal' alt=""/></Link>
+                </div>       				
 					)
 				})
 			}

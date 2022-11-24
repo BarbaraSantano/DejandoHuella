@@ -44,12 +44,12 @@ const Navbar = () => {
                       {/* <a href='Inicio' onClick={closeMenu}>INICIO</a> */}
                     </li>
                     <li className='nav-item'>
-                    <Link to="/perro">PERROS</Link>
+                    <Link to="/tarjetaperro">PERROS</Link>
                       {/* <a href='adoptaPerro' onClick={closeMenu}>PERROS</a> */}
                     </li>
 
                     <li className='nav-item'>
-                    <Link to="/gato">GATOS</Link>
+                    <Link to="/tarjetagato">GATOS</Link>
                       {/* s */}
                     </li>
                    
