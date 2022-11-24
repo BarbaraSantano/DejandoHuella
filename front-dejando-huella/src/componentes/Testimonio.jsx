@@ -19,9 +19,10 @@ class Testimonio extends React.Component {
           </p>
           <p className='texto-testimonio'>"{this.props.testimonio}"</p>
           <div className="contenedor-boton">
-                        <Boton
-                         texto='Saber más' />
+          <a title="" href={"https://www.albacetedejandohuella.org/"}>  <Boton texto='Saber más' /></a>
                         </div>
+
+
         </div>
       </div>
     );

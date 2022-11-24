@@ -17,6 +17,7 @@ import Conocenos from "./routes/Conocenos"
 import Perro from "./routes/Perro"
 import Gato from "./routes/Gato"
 import {Route,Routes} from 'react-router-dom';
+import Boton from "./componentes/Boton"
 function App() {
   return (
 
@@ -28,6 +29,7 @@ function App() {
       <Route path="/contacto" element={<Contacto/>}/>
       <Route path="/conocenos" element={<Conocenos/>}/>
       <Route path="/colabora" element={<Colabora/>}/>
+
     
      
     </Routes>
