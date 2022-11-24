@@ -82,7 +82,7 @@ export const Carrousel = () => {
           </div>
         ) : null}
 
-<button className="btn" onClick="" >Ver todos </button>
+<button className="btncarrousel " onClick="" >Ver todos </button>
 
     </div>
       

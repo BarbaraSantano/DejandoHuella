@@ -4,9 +4,9 @@
     display:block;
     flex-direction: row;
 	flex-wrap: wrap;
-	justify-content:space-around;
-    justify-content: center;
-    margin: 20px;
+	justify-content:center;
+     align-items: center;
+    margin-left: 10%;
 
 }
 .titulo{
@@ -14,22 +14,19 @@
     flex-direction: row;
 	justify-content:center;
     text-align: center;
-    margin:30 px;
+    margin-right:30px;
 
 }
 .imagenUltimosMiembros{
     height: 100%;
     width: 300px;
-    margin: 90px;
+    margin: 30px;
     border-radius: 100%;
     border:5px solid rgb(167, 237, 188);
-    
-
-    
-   
 }
 h2{
+    padding-top: 10%;
     font-family: 'Amatic SC', cursive; 
-    font-size: 30px;
+    font-size: 50px;
 }
 

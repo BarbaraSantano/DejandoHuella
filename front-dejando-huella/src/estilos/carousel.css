@@ -31,6 +31,47 @@
     opacity: 1;
     transition-duration: 1s;
   }
+  .btncarrousel  {
+    background: #72f367;
+    
+  
+    /* Crear degradados */
+    
+    /* Dar bordes curvados a btn */
+    
+    -webkit-border-radius: 15;
+    -moz-border-radius: 15;
+    border: none;
+    border-radius: 15px;
+    -webkit-box-shadow: 6px 5px 24px #666666;
+    -moz-box-shadow: 6px 5px 24px #666666;
+    box-shadow: 6px 5px 24px #666666;
+    font-family: 'Amatic Sc';
+    color: #5e62d8;
+    font-size: 40px;
+    font-weight: bold;
+      padding: 35px;
+      padding-bottom: 10px;
+      padding-top: 10px;
+    
+      margin-left: 45%;
+    text-decoration: none;
+    
+      
+    
+  }
+  
+  .btncarrousel :hover {
+    color: #fafafa;
+    background: #58f079;
+    background-image: -webkit-linear-gradient(left, #f114db, #6fed64);
+    background-image: -moz-linear-gradient(left, #eb05b9, #6fed64);
+    background-image: -ms-linear-gradient(left, #ed32d4, #6fed64);
+    background-image: -o-linear-gradient(left, #e313c3, #6fed64);
+    background-image: linear-gradient(to right, #e914cc, #6fed64);
+    text-decoration: none;
+  }
+  
   
   @media all and (max-width: 600px) {
     .trendingNews img {
@@ -45,6 +86,9 @@
     .sliderCont {
       display: flex;
       
+    }
+    .btncarrousel {
+      font-size: 20px;
     }
   }
 
