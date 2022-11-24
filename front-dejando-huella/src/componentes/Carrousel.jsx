@@ -51,8 +51,8 @@ export const Carrousel = () => {
   };
   return (
 
-    <div className="prueba">
-      <div>
+    <div className="textSlider">
+      <h2> “Más de 258 300 animales fueron abandonados en 2020. Dicho de otro modo,  700 animales que terminan en las calles o perreras de España cada día”</h2>
 
         {length !== 0 ? (
           <div className="trendingNews">
@@ -84,9 +84,9 @@ export const Carrousel = () => {
 
 <button className="btn" onClick="" >Ver todos </button>
 
-      </div>
-      
     </div>
+      
+    
 
 
   );
