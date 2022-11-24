@@ -7,7 +7,7 @@ import Cards from '../json/data.json';
  
     return (
 		<div className="textCaja">
-			<h1> Adopta un perro ó gato</h1>
+			<h1 className="h"> Adopta un perro ó gato</h1>
 			 <p>Si no puedes comprometerte a adoptar un animal para siempre, ¡aún puedes ayudar!!</p>
 		
 	    	<div className="caja">	
